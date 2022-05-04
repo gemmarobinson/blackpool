@@ -2,7 +2,7 @@
 
 $rfs-rem-value: 10;
 $site-html-font-size: 62.5%;
-$site-body-font-size: 1.6rem;
+$site-body-font-size: 2.1rem;
 $rfs-factor: 15;
 
 html {
@@ -10,11 +10,14 @@ html {
 }
 
 body {
-    color: $clr-black;
+    color: $clr-white;
+    background-color: $clr-midnight-blue;
     font-size: $site-body-font-size;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Montserrat Regular";
+    font-family: "Archivo";
+    font-weight: normal;
+    min-height: 100vh;
 }
 
 html,

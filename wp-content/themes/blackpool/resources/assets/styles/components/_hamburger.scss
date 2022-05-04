@@ -11,33 +11,22 @@
     padding: 0.5rem 0.8rem;
     outline: none;
     display: block;
-
-    @include media-breakpoint-up(lg) {
-        display: none;
-    }
-
-    &:hover {
-        opacity: 1;
-    }
-
-    &.is-active {
-        .hamburger-inner {
-            background-color: $clr-black;
-
-            &:before,
-            &:after {
-                background-color: $clr-black;
-            }
-        }
-
-        &:hover {
-            opacity: 1;
-        }
-    }
+    transition: $transition-default;
 
     &:active,
     &:focus {
         outline: none;
+    }
+
+    &.is-active {
+        .hamburger-inner {
+            background-color: $clr-white;
+
+            &:before,
+            &:after {
+                background-color: $clr-white;
+            }
+        }
     }
 
     // hamburger--collapse
@@ -53,63 +42,33 @@
         }
     }
 
-    // hamburger--spin
-    &--spin {
-        .hamburger-box {
-            top: 0.3rem;
-        }
-    }
-
     // hamburger-box
     &-box {
-        width: 2rem;
-        height: 2rem;
+        width: 5.4rem;
+        height: 5.4rem;
     }
 
     // hamburger-inner
     &-inner {
-        background-color: $clr-black;
-        width: 2rem;
-        height: 0.2rem;
+        width: 100%;
+        height: 0.3rem;
         border-radius: 0;
+        background-color: $clr-white;
 
-        @include media-breakpoint-up(lg) {
+        &:before {
+            top: -1.5rem;
+            width: 100%;
+            height: 0.3rem;
+            border-radius: 0;
             background-color: $clr-white;
         }
 
-        &:before {
-            background-color: $clr-black;
-            top: -0.7rem;
-            width: 2rem;
-            height: 0.2rem;
-            border-radius: 0;
-
-            @include media-breakpoint-up(lg) {
-                background-color: $clr-white;
-            }
-        }
-
         &:after {
-            background-color: $clr-black;
-            bottom: -0.7rem;
-            width: 2rem;
-            height: 0.2rem;
+            bottom: -1.5rem;
+            width: 100%;
+            height: 0.3rem;
             border-radius: 0;
-
-            @include media-breakpoint-up(lg) {
-                background-color: $clr-white;
-            }
-        }
-    }
-
-    &.is-fixed {
-        .hamburger-inner {
-            background-color: $clr-black;
-
-            &:before,
-            &:after {
-                background-color: $clr-black;
-            }
+            background-color: $clr-white;
         }
     }
 }

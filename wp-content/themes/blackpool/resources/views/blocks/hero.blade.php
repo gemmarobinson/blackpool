@@ -13,10 +13,8 @@ SupportsMultiple: false
 <section data-{{ $block['id'] }} class="{{ $block['classes'] }}">
     <div class="container">
         <div class="row">
-            <div class="col-24 col-md-10 col-lg-8" data-aos="fade-up">
-                <div class="hero__inner">
-                    <h1>Title</h1>
-                </div>
+            <div class="col-24">
+                <h1>Title</h1>
             </div>
         </div>
     </div>
