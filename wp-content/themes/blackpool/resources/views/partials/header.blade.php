@@ -1,5 +1,5 @@
 <header class="header js-header">
-    <a class="header__logo" href="{{ home_url('/') }}">
+    <a class="header__logo" style="color: black" href="{{ home_url('/') }}">
         Blackpool
     </a>
     @if(has_nav_menu('primary_navigation'))
