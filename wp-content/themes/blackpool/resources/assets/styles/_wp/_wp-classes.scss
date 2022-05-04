@@ -1,0 +1,114 @@
+/**
+ * WordPress Generated Classes
+ * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+/** Media alignment */
+.alignnone {
+  margin: 0.5rem 2rem 2rem 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 0.5rem auto 0.5rem auto;
+}
+
+.alignright {
+  float:right;
+  margin: 0.5rem 0 2rem 2rem;
+}
+
+.alignleft {
+  float: left;
+  margin: 0.5rem 2rem 2rem 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 0.5rem 0 2rem 2rem;
+}
+
+a img.alignnone {
+  margin: 0.5rem 2rem 2rem 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 0.5rem 2rem 2rem 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/** Captions */
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 0.5rem 0.3rem 1rem;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 0.5rem 2rem 2rem 0;
+}
+
+.wp-caption.alignleft {
+  margin: 0.5rem 2rem 2rem 0;
+}
+
+.wp-caption.alignright {
+  margin: 0.5rem 0 2rem 2rem;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  margin: 0;
+  padding: 0 0.4rem 0.5rem;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 0.1rem;
+  margin: -0.1rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 0.1rem;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 0.5rem;
+  line-height: normal;
+  padding: 1.5rem 2.3rem 1.4rem;
+  text-decoration: none;
+  top: 0.5rem;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}

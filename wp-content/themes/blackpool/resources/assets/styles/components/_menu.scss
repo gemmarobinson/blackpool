@@ -1,0 +1,124 @@
+@include media-breakpoint-up(lg) {
+    .menu {
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .menu-item {
+            a {
+                display: block;
+                color: $clr-white;
+            }
+        }
+
+        > li {
+            display: block;
+            position: relative;
+            margin: 0 0 0 5rem;
+
+            &:hover {
+                .sub-menu {
+                    opacity: 1;
+                    pointer-events: unset;
+                }
+
+                &.menu-item-has-children > a:after {
+                    transform: translate(0, -40%) rotate(180deg);
+                }
+            }
+
+            &.menu-item-has-children {
+                > a {
+                    position: relative;
+                    padding-right: 3.5rem;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 1.25rem;
+                        border-style: solid;
+                        border-radius: 0.2rem;
+                        border-width: 0.7rem 0.5rem 0 0.5rem;
+                        border-color: $clr-white transparent transparent
+                            transparent;
+                        transition: all $transition-default;
+                    }
+                }
+
+                &:hover {
+                    > a:after {
+                        transform: translate(0, -40%) rotate(180deg);
+                    }
+                }
+            }
+
+            > .sub-menu {
+                padding-left: 0;
+                opacity: 0;
+                pointer-events: none;
+                background-color: $clr-white;
+                width: 18.5rem;
+                position: absolute;
+                z-index: $zindex3;
+                top: 100%;
+                right: 0;
+                padding-top: 1.5rem;
+                text-align: right;
+                transition: all $transition-default;
+
+                > li {
+                    position: relative;
+
+                    > a {
+                        display: inline-block;
+                        color: $clr-black;
+                        transition: background-color $transition-default;
+                        margin: 0;
+                        width: 100%;
+                        padding: 1.6rem 2rem 1.3rem;
+
+                        &:hover {
+                            background-color: $clr-grey-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .is-fixed {
+        .menu {
+            .menu-item {
+                a {
+                    color: $clr-black;
+                }
+            }
+
+            > li {
+                &:hover {
+                    > a {
+                        color: $clr-black;
+
+                        &:after {
+                            border-color: $clr-black transparent transparent
+                                transparent !important;
+                        }
+                    }
+                }
+
+                &.menu-item-has-children {
+                    > a {
+                        &:after {
+                            border-color: $clr-black transparent transparent
+                                transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

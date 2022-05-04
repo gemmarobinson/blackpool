@@ -1,0 +1,43 @@
+/** Import dependencies */
+// @import "_autoload/slick";
+@import "_autoload/aos";
+@import "_autoload/hamburgers";
+@import "_autoload/rfs";
+
+/** Import fontawesome file and versions you need */
+// @import "_autoload/fontawesome/fontawesome";
+// @import "_autoload/fontawesome/brands";
+// @import "_autoload/fontawesome/duotone";
+// @import "_autoload/fontawesome/solid";
+// @import "_autoload/fontawesome/regular";
+// @import "_autoload/fontawesome/light";
+
+/** Import native gutenberg styles */
+@import "_wp/_all/*";
+
+/** Import theme styles */
+@import "settings/bootstrap";
+@import "settings/colors";
+@import "settings/fontface";
+@import "settings/global";
+@import "settings/transitions";
+@import "settings/zindex";
+
+@import "tools/animation";
+@import "tools/conversion";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+
+@import "generic/global";
+
+@import "elements/a";
+@import "elements/form";
+@import "elements/headers";
+@import "elements/image";
+@import "elements/lists";
+@import "elements/paragraph";
+
+@import "components/*";
+
+@import "blocks/*";
+
+@import "utilities/*";

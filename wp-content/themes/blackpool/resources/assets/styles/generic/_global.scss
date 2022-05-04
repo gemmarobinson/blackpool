@@ -1,0 +1,36 @@
+/** Global */
+
+$rfs-rem-value: 10;
+$site-html-font-size: 62.5%;
+$site-body-font-size: 1.6rem;
+$rfs-factor: 15;
+
+html {
+    font-size: $site-html-font-size;
+}
+
+body {
+    color: $clr-black;
+    font-size: $site-body-font-size;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Montserrat Regular";
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.is-active {
+    @include media-breakpoint-down(lg) {
+        overflow: hidden;
+    }
+}

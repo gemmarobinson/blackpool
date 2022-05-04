@@ -1,0 +1,42 @@
+.blog-benefit {
+    display: block;
+    margin: 2.5rem 0;
+
+    @include media-breakpoint-up(md) {
+        margin: 0;
+    }
+
+    // blog-benefit__icon-container
+    &__icon-container {
+        margin-bottom: 1.2rem;
+        width: 6rem;
+        height: 6rem;
+
+        @include media-breakpoint-up(md) {
+            width: 6.4rem;
+            height: 6.4rem;
+        }
+    }
+
+    // blog-benefit__icon
+    &__icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    // blog-benefit__heading
+    &__heading {
+        font-family: "Montserrat Bold", sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: 0.01rem;
+        line-height: 1.5;
+    }
+
+    // blog-benefit__button
+    &__button {
+        margin-top: 2rem;
+        padding: 0.8rem 1.4rem;
+    }
+}

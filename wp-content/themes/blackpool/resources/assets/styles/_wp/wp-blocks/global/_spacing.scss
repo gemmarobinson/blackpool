@@ -1,0 +1,28 @@
+.entry-content > *:not(.wp-block-wrap) {
+  @include wp-editor-contain();
+}
+
+.wp-block-wrap {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  max-width: none;
+}
+
+.wp-block-wrap > .alignfull {
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.wp-block-wrap > .alignwide {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: #{wp-editor-container("medium")}) {
+    width: wp-editor-wide-align("width");
+    max-width: wp-editor-wide-align("max-width");
+  }
+}

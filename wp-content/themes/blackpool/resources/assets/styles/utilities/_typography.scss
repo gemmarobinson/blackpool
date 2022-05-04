@@ -1,0 +1,9 @@
+.small-paragraph {
+    font-size: 1.2rem;
+    letter-spacing: normal;
+    margin: 0;
+
+    @include media-breakpoint-up(md) {
+        font-size: 1.4rem;
+    }
+}

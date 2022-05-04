@@ -1,0 +1,92 @@
+@include media-breakpoint-down(lg) {
+    .mobile-menu {
+        position: fixed;
+        height: 100vh;
+        background-color: $clr-white;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        width: 45rem;
+        max-width: 80vw;
+        padding: 45px 22px 0 22px !important;
+        overflow-y: auto;
+        transform: translateX(-100vw);
+        transition: 0.3s ease-out;
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        li {
+            position: relative;
+            padding: 1.2rem 0;
+            border-bottom: 0.1rem solid black;
+
+            a {
+                font-size: 18px;
+                color: black;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        > li {
+            &:not(.menu-item-has-children) {
+                a {
+                    display: block;
+                }
+            }
+
+            &.menu-item-has-children {
+                &:after {
+                    content: "";
+                    background-image: url("../images/menu-plus.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    top: 1.6rem;
+                    right: 1.2rem;
+                }
+
+                > .sub-menu {
+                    display: none;
+
+                    > li {
+                        border-color: #a3a3a3;
+
+                        > a {
+                            font-size: 1.4rem;
+                            color: #a3a3a3;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 0;
+                            border-bottom: 0;
+                        }
+                    }
+                }
+
+                &.opened {
+                    &:after {
+                        background-image: url("../images/menu-minus.svg");
+                    }
+
+                    a {
+                        color: #a3a3a3;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+}

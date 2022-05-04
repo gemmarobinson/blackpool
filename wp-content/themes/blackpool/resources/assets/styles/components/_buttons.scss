@@ -1,0 +1,40 @@
+.bttn {
+    display: inline-block;
+    transition: all $transition-default;
+    border-radius: 0;
+    font-family: "Montserrat Bold", sans-serif;
+    text-align: center;
+    letter-spacing: normal;
+    line-height: 1.5;
+    font-size: 1.4rem;
+    padding: 1rem 3.2rem;
+
+    @include media-breakpoint-up(md) {
+        font-size: 1.6rem;
+        padding: 1rem 6.4rem;
+    }
+
+    &.bttn-black {
+        background-color: $clr-black;
+        color: $clr-white;
+        border: 0.2rem solid $clr-black;
+
+        &:hover {
+            color: $clr-black;
+            background-color: $clr-white;
+            border-color: $clr-black;
+        }
+    }
+
+    &.bttn-white {
+        background: none;
+        color: $clr-white;
+        border: 0.2rem solid $clr-white;
+
+        &:hover {
+            color: $clr-black;
+            background-color: $clr-white;
+            border-color: $clr-white;
+        }
+    }
+}

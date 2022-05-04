@@ -1,0 +1,57 @@
+/**
+ * @mixin wp-block-contain
+ *
+ * General container unit
+ **/
+@mixin wp-editor-contain() {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: wp-editor-spacing();
+  padding-right: wp-editor-spacing();
+
+  @media (min-width: #{wp-editor-breakpoint("large")}) {
+    max-width: wp-editor-container("large");
+    padding-left: initial;
+    padding-right: initial;
+  }
+
+  @media (min-width: #{wp-editor-breakpoint("extra-large")}) {
+    max-width: wp-editor-container("extra-large");
+    padding-left: initial;
+    padding-right: initial;
+  }
+}
+
+/**
+ * @mixin bootstrap-else
+ *
+ * If true utilize the given bootstrap class(es)
+ * Else utilize the given fallback(s)
+ **/
+@mixin bootstrap-else($bootstrap, $fallback) {
+  @if wp-editor-bootstrap-enabled() == true {
+    @if (type-of($bootstrap)=="list") {
+      @each $extend in $bootstrap {
+        @extend .#{$extend} !optional;
+      }
+    }
+
+    @else {
+      @extend .#{$bootstrap} !optional;
+    }
+  }
+
+  @else {
+    @if (type-of($fallback)=="list") {
+      @each $extend in $fallback {
+        @extend %#{$extend} !optional;
+      }
+    }
+
+    @else {
+      @extend %#{$fallback} !optional;
+    }
+  }
+}

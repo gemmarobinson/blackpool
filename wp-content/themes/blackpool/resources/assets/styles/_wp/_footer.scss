@@ -1,0 +1,3 @@
+  footer.content-info > :first-child {
+    @include wp-editor-contain();
+  }

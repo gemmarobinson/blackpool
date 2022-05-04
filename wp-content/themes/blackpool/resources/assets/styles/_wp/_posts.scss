@@ -1,0 +1,4 @@
+article > header:first-child,
+.entry-summary {
+  @include wp-editor-contain();
+}

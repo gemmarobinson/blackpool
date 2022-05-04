@@ -1,0 +1,58 @@
+.wp-block-button {
+  %wp-block-button__link {
+    display: inline-block;
+    padding: (wp-editor-spacing() / 2) wp-editor-spacing();
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: wp-editor-color("white");
+    background-color: wp-editor-color("primary");
+    border-color: wp-editor-color("primary");
+
+    &:active,
+    &.active,
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+      outline: thin dotted; // Default
+      outline: 5px auto -webkit-focus-ring-color; // WebKit
+      outline-offset: -2px;
+      text-decoration: none;
+      background-color: darken(wp-editor-color("primary"), 3%);
+    }
+  }
+
+  .wp-block-button__link {
+    @include bootstrap-else(("btn" "btn-primary"), wp-block-button__link);
+  }
+
+  &.alignleft {
+    text-align: left;
+  }
+
+  &.alignright {
+    text-align: right;
+  }
+
+  &.aligncenter {
+    text-align: center;
+  }
+
+  &.alignleft .wp-block-button__link {
+    float: left;
+    margin: wp-editor-spacing() wp-editor-spacing() wp-editor-spacing() 0;
+  }
+
+  &.alignright .wp-block-button__link {
+    float: right;
+    margin: wp-editor-spacing() 0 wp-editor-spacing() wp-editor-spacing();
+  }
+
+  &.aligncenter .wp-block-button__link {
+    margin-bottom: (wp-editor-spacing() / 2);
+  }
+}

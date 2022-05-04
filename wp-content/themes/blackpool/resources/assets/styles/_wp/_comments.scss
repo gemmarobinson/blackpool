@@ -1,0 +1,7 @@
+.comments {
+  @include wp-editor-contain();
+}
+
+.comment-list ol {
+  list-style: none;
+}

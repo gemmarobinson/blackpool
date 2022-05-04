@@ -1,0 +1,115 @@
+/*
+* Hamburger - extends autoload/hamburgers
+* This does not follow the BEM naming convention due to it using a third party library
+*/
+
+.hamburger {
+    position: relative;
+    top: 0.1rem;
+    right: 0;
+    z-index: 2;
+    padding: 0.5rem 0.8rem;
+    outline: none;
+    display: block;
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &.is-active {
+        .hamburger-inner {
+            background-color: $clr-black;
+
+            &:before,
+            &:after {
+                background-color: $clr-black;
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    // hamburger--collapse
+    &--collapse {
+        .hamburger-inner::after {
+            top: -1.4rem;
+        }
+
+        &.is-active {
+            .hamburger-inner {
+                transform: translate3d(0, -0.82rem, 0) rotate(-45deg);
+            }
+        }
+    }
+
+    // hamburger--spin
+    &--spin {
+        .hamburger-box {
+            top: 0.3rem;
+        }
+    }
+
+    // hamburger-box
+    &-box {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    // hamburger-inner
+    &-inner {
+        background-color: $clr-black;
+        width: 2rem;
+        height: 0.2rem;
+        border-radius: 0;
+
+        @include media-breakpoint-up(lg) {
+            background-color: $clr-white;
+        }
+
+        &:before {
+            background-color: $clr-black;
+            top: -0.7rem;
+            width: 2rem;
+            height: 0.2rem;
+            border-radius: 0;
+
+            @include media-breakpoint-up(lg) {
+                background-color: $clr-white;
+            }
+        }
+
+        &:after {
+            background-color: $clr-black;
+            bottom: -0.7rem;
+            width: 2rem;
+            height: 0.2rem;
+            border-radius: 0;
+
+            @include media-breakpoint-up(lg) {
+                background-color: $clr-white;
+            }
+        }
+    }
+
+    &.is-fixed {
+        .hamburger-inner {
+            background-color: $clr-black;
+
+            &:before,
+            &:after {
+                background-color: $clr-black;
+            }
+        }
+    }
+}
