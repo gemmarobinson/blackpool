@@ -15,6 +15,7 @@ SupportsMultiple: false
         <div class="row">
             <div class="col-24">
                 <h1>Title</h1>
+                <p>Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit.</strong> Eum blanditiis molestias repellat adipisci, voluptates sed ad optio tempore velit voluptatibus. Natus vero voluptatum tenetur in commodi repellendus, incidunt molestiae quaerat.</p>
             </div>
         </div>
     </div>
