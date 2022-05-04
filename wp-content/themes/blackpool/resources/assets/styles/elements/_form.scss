@@ -24,11 +24,11 @@ form {
         display: block;
         width: 100%;
         border-radius: 0;
-        border: 0.2rem solid $clr-grey-light;
+        border: 0.2rem solid $clr-grey-blue;
         box-sizing: border-box;
-        background-color: $clr-grey-light;
+        background-color: $clr-grey-blue;
         transition: border-color $transition-default;
-        color: $clr-grey-dark;
+        color: $clr-grey-blue;
         text-align: left;
         font-family: inherit;
         line-height: 1.5;
@@ -43,7 +43,7 @@ form {
         &:active,
         &:focus {
             outline: none;
-            border-color: darken($clr-grey-light, 10%);
+            border-color: darken($clr-grey-blue, 10%);
         }
     }
 
@@ -118,16 +118,16 @@ form {
     }
 
     ::placeholder {
-        color: $clr-grey-dark;
+        color: $clr-grey-blue;
         opacity: 1;
     }
 
     :-ms-input-placeholder {
-        color: $clr-grey-dark;
+        color: $clr-grey-blue;
     }
 
     ::-ms-input-placeholder {
-        color: $clr-grey-dark;
+        color: $clr-grey-blue;
     }
 
     ul.gform_fields {
@@ -148,7 +148,7 @@ form {
         &_error {
             font-size: 1.4rem;
             line-height: 1.5;
-            color: $clr-red-error;
+            color: $clr-red;
             margin-bottom: 2rem;
             text-align: left;
         }
@@ -157,7 +157,7 @@ form {
         &_message {
             font-size: 1.4rem;
             line-height: 1.5;
-            color: $clr-red-error;
+            color: $clr-red;
             margin-top: 0.4rem;
             text-align: left;
         }
@@ -179,9 +179,9 @@ form {
 }
 
 .gform_submission_error {
-    color: $clr-red-error;
+    color: $clr-red;
 }
 
 .gform_confirmation_message {
-    color: $clr-green-success;
+    color: green;
 }
