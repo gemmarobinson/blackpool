@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5f2446ba84c2fb84bdc7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "781d7a173cc477b2d078"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(49)(__webpack_require__.s = 49);
+/******/ 	return hotCreateRequire(52)(__webpack_require__.s = 52);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2235,7 +2235,10 @@ module.exports = function(hash, moduleMap, options) {
 /* 46 */,
 /* 47 */,
 /* 48 */,
-/* 49 */
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */
 /*!***********************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./scripts/editor.js ***!
   \***********************************************************************/
@@ -2244,11 +2247,11 @@ module.exports = function(hash, moduleMap, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/gemma/Sites/blackpool/wp-content/themes/blackpool/resources/assets/build/util/../helpers/hmr-client.js */1);
-module.exports = __webpack_require__(/*! ./scripts/editor.js */50);
+module.exports = __webpack_require__(/*! ./scripts/editor.js */53);
 
 
 /***/ }),
-/* 50 */
+/* 53 */
 /*!***************************!*\
   !*** ./scripts/editor.js ***!
   \***************************/
@@ -2258,7 +2261,7 @@ module.exports = __webpack_require__(/*! ./scripts/editor.js */50);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_editor_json__ = __webpack_require__(/*! ./../../assets/editor.json */ 51);
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_editor_json__ = __webpack_require__(/*! ./../../assets/editor.json */ 54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_editor_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__assets_editor_json__);
 
 
@@ -2289,7 +2292,7 @@ jQuery(document).ready(function(){
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
 
 /***/ }),
-/* 51 */
+/* 54 */
 /*!*********************!*\
   !*** ./editor.json ***!
   \*********************/

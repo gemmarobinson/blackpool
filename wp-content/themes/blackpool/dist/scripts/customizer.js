@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5f2446ba84c2fb84bdc7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "781d7a173cc477b2d078"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(47)(__webpack_require__.s = 47);
+/******/ 	return hotCreateRequire(50)(__webpack_require__.s = 50);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2233,7 +2233,10 @@ module.exports = function(hash, moduleMap, options) {
 /* 44 */,
 /* 45 */,
 /* 46 */,
-/* 47 */
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */
 /*!***************************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./scripts/customizer.js ***!
   \***************************************************************************/
@@ -2242,11 +2245,11 @@ module.exports = function(hash, moduleMap, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/gemma/Sites/blackpool/wp-content/themes/blackpool/resources/assets/build/util/../helpers/hmr-client.js */1);
-module.exports = __webpack_require__(/*! ./scripts/customizer.js */48);
+module.exports = __webpack_require__(/*! ./scripts/customizer.js */51);
 
 
 /***/ }),
-/* 48 */
+/* 51 */
 /*!*******************************!*\
   !*** ./scripts/customizer.js ***!
   \*******************************/

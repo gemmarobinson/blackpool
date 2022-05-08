@@ -1,9 +1,12 @@
 .header {
     padding: 2.1rem 4.5rem;
-    position: relative;
     display: flex;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 
     &:before {
         content: "";

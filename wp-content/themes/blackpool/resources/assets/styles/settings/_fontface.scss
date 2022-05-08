@@ -17,6 +17,38 @@
 
 @font-face {
     font-family: "Archivo";
+    src: url("../fonts/archivo-medium.woff2") format("woff2"),
+        url("../fonts/archivo-medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-mediumitalic.woff2") format("woff2"),
+        url("../fonts/archivo-mediumitalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-mediumitalic.woff2") format("woff2"),
+        url("../fonts/archivo-mediumitalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-medium.woff2") format("woff2"),
+        url("../fonts/archivo-medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Archivo";
     src: url("../fonts/archivo-bold.woff2") format("woff2"),
         url("../fonts/archivo-bold.woff") format("woff");
     font-weight: bold;

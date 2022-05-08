@@ -1,9 +1,50 @@
-.small-paragraph {
-    font-size: 1.2rem;
-    letter-spacing: normal;
-    margin: 0;
-
-    @include media-breakpoint-up(md) {
-        font-size: 1.4rem;
-    }
+.large-h1 {
+    font-weight: 700;
+    font-size: 90px;
+    letter-spacing: -1.99px;
+    line-height: 0.744;
 }
+
+.small-h1 {
+    font-weight: 700;
+    font-size: 70px;
+    letter-spacing: -1.55px;
+    line-height: 1;
+}
+
+.subheading {
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: 2.19px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.bold-text {
+    font-size: 2.3rem;
+    letter-spacing: -0.051rem;
+    line-height: 1.217;
+    color: $clr-sand;
+    font-weight: bold;
+}
+
+// ? {
+//     font-weight: 500;
+//     font-size: 41px;
+//     letter-spacing: -0.21px;
+//     line-height: 0.683;
+// }
+
+// ? {
+//     font-weight: 700;
+//     font-size: 32px;
+//     letter-spacing: -0.71px;
+//     line-height: 1.156;
+// }
+
+// ? {
+//     font-weight: 700;
+//     font-size: 50px;
+//     letter-spacing: -1.11px;
+//     line-height: 1.08;
+// }
