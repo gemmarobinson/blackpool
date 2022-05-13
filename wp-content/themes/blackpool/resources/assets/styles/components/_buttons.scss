@@ -16,5 +16,11 @@
     &:focus,
     &:active {
         background-color: $clr-purple;
+        color: $clr-white;
+    }
+
+    &--white {
+        color: $clr-midnight-blue;
+        background-color: $clr-white;
     }
 }
