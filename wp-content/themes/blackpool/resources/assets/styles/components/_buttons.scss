@@ -23,4 +23,9 @@
         color: $clr-midnight-blue;
         background-color: $clr-white;
     }
+
+    &--black {
+        background-color: $clr-black;
+        color: $clr-white;
+    }
 }

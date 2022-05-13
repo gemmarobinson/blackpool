@@ -1,0 +1,30 @@
+.news-card {
+    display: block;
+    color: $clr-midnight-blue;
+    transition: $transition-default;
+    margin: 0 0 6rem;
+
+    &:hover {
+        color: $clr-sky-blue;
+
+        .news-card__image {
+            opacity: 0.6;
+        }
+    }
+
+    &__image {
+        height: 28.7rem;
+        transition: $transition-default;
+        margin: 0 0 3rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__heading {
+        margin: 0 0 2.5rem;
+    }
+}
