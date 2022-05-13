@@ -1,0 +1,15 @@
+.footer-cta {
+    padding: 8rem 0 6rem;
+    background-image: url(../images/footer-cta-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+
+    &__heading {
+        font-size: 6rem;
+        font-weight: 500;
+        line-height: 1.083;
+        letter-spacing: -0.03rem;
+        margin: 0 0 3rem;
+    }
+}
