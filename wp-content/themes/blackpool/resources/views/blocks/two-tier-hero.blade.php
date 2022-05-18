@@ -15,7 +15,7 @@ SupportsMultiple: false
         <div class="two-tier-hero__top">
             <div class="container">
                 <div class="row justify-content-center justify-content-xl-start">
-                    <div class="col-24 col-md-18 col-lg-14 col-xxl-10">
+                    <div class="col-24 col-md-18 col-lg-14 col-xxl-11 offset-xl-1 offset-xxl-2">
                         <h1 class="small-h1">{{ $tier_one['heading'] }}</h1>
                         <p class="bold-text">{{ $tier_one['large_text'] }}</p>
                         {!! $tier_one['text'] !!}
@@ -28,8 +28,8 @@ SupportsMultiple: false
     @if($tier_two = get_field('tier_two'))
         <div class="two-tier-hero__bottom">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-24 col-md-18 col-lg-14 col-xxl-9">
+                <div class="row justify-content-center justify-content-xxl-start">
+                    <div class="col-24 col-md-18 col-lg-14 col-xxl-10 offset-xxl-8">
                         <h2 class="small-h1">{{ $tier_two['heading'] }}</h2>
                         <p class="bold-text">{{ $tier_two['large_text'] }}</p>
                         {!! $tier_two['text'] !!}

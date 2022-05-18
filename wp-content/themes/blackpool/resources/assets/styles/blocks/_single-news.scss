@@ -1,7 +1,11 @@
 .single-news {
-    padding: 10rem 0;
+    padding: 6rem 0;
     position: relative;
     z-index: 2;
+
+    @include media-breakpoint-up(lg) {
+        padding: 10rem 0;
+    }
 
     &:after {
         content: "";
@@ -17,7 +21,7 @@
     }
 
     &__post-heading {
-        font-size: 3.5rem;
+        @include font-size(3.5rem);
         letter-spacing: -0.077rem;
         line-height: 1.286;
         font-weight: bold;
@@ -25,7 +29,7 @@
     }
 
     &__post-date {
-        font-size: 2.5rem;
+        @include font-size(2.5rem);
         font-weight: 500;
         letter-spacing: -0.055rem;
         line-height: 1.36;

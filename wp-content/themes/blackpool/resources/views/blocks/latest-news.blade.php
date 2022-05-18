@@ -49,7 +49,7 @@ SupportsMultiple: true
             @endif
 
             @if($btn = get_field('button'))
-                <div class="col-24 d-flex justify-content-center mt-5">
+                <div class="col-24 d-flex justify-content-center mt-lg-5">
                     <a class="bttn bttn--black" href="{{ $btn['url'] }}" target="{{ $btn['target'] }}">{{ $btn['title'] }}</a>
                 </div>
             @endif

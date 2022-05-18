@@ -14,19 +14,17 @@ h5,
 
 h1,
 .h1 {
-    // @include font-size(7.4rem);
+    @include font-size(8.5rem);
     font-weight: 700;
-    font-size: 85px;
-    letter-spacing: -1.88px;
+    letter-spacing: -0.188rem;
     line-height: 1.024;
 }
 
 h2,
 .h2 {
-    // @include font-size(5.6rem);
+    @include font-size(4.5rem);
     font-weight: 700;
-    font-size: 45px;
-    letter-spacing: -0.99px;
+    letter-spacing: -0.099rem;
     line-height: 1.289;
 }
 
@@ -36,9 +34,8 @@ h4,
 .h4,
 h5,
 .h5 {
-    // @include font-size(4.8rem);
+    @include font-size(2.9rem);
     font-weight: 700;
-    font-size: 29px;
-    letter-spacing: -0.64;
+    letter-spacing: -0.064rem;
     line-height: 1.172;
 }

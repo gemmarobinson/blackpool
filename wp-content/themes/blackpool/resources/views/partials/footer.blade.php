@@ -3,18 +3,18 @@
     <section class="footer-cta">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-12">
+                <div class="col-24 col-lg-12">
                     @if($img = $cta['image'])
                         <img src="{{ $img['sizes']['large'] }}" alt="{{ $cta['alt'] }}" />
                     @endif                    
                 </div>
-                <div class="col-12">
+                <div class="col-24 col-lg-12">
                     <h2 class="footer-cta__heading">{{ $cta['heading'] }}</h2>
                     @if($btn = $cta['primary_button'])
-                        <a class="bttn" href="{{ $btn['url'] }}" target="{{ $btn['target'] }}">{{ $btn['title'] }}</a>
+                        <a class="bttn mx-2 mx-lg-2" href="{{ $btn['url'] }}" target="{{ $btn['target'] }}">{{ $btn['title'] }}</a>
                     @endif
                     @if($btn = $cta['secondary_button'])
-                        <a class="bttn ms-2" href="{{ $btn['url'] }}" target="{{ $btn['target'] }}">{{ $btn['title'] }}</a>
+                        <a class="bttn ms-2 me-2 me-lg-2" href="{{ $btn['url'] }}" target="{{ $btn['target'] }}">{{ $btn['title'] }}</a>
                     @endif
                 </div>
             </div>
