@@ -18,6 +18,7 @@ h1,
     font-weight: 700;
     letter-spacing: -0.188rem;
     line-height: 1.024;
+    margin: 0 0 3rem;
 
     @include media-breakpoint-up(xxl) {
         font-size: 8.5rem;

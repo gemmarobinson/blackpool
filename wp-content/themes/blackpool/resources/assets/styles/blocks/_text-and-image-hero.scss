@@ -1,0 +1,43 @@
+.text-and-image-hero {
+    position: relative;
+    z-index: 1;
+    padding: 14rem 0 6rem;
+
+    @include media-breakpoint-up(sm) {
+        padding: 25.5rem 0 12.5rem;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 47vw 0 0 47vw;
+        border-color: transparent transparent transparent $clr-mustard;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 20rem 20rem 0;
+        border-color: transparent $clr-purple transparent transparent;
+        z-index: -1;
+
+        @include media-breakpoint-up(md) {
+            border-width: 0 30vw 30vw 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            border-width: 0 30rem 30rem 0;
+        }
+    }
+}
