@@ -1,0 +1,17 @@
+.three-quarter-container {
+    @include media-breakpoint-up(xl) {
+        max-width: calc(((100vw - 125rem) / 2) + 125rem);
+    }
+
+    &--right {
+        @include media-breakpoint-up(xl) {
+            margin-right: unset;
+        }
+    }
+}
+
+// sm: 540px,
+// md: 720px,
+// lg: 960px,
+// xl: 1140px,
+// xxl: 1250px,
