@@ -26,6 +26,10 @@
         line-height: 1.286;
         font-weight: bold;
         margin: 0 0 2rem;
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 3.5rem;
+        }
     }
 
     &__post-date {

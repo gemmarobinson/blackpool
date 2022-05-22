@@ -1,0 +1,28 @@
+.footer-menu {
+    @include media-breakpoint-up(sm) {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-item {
+        margin: 0 4rem 2rem 0;
+
+        a {
+            color: $clr-white;
+            font-size: 1.4rem;
+            line-height: 1;
+            letter-spacing: -0.031rem;
+            transition: $transition-default;
+
+            &:hover,
+            &:focus {
+                color: $clr-mustard;
+            }
+
+            &:active {
+                color: $clr-white;
+            }
+        }
+    }
+}

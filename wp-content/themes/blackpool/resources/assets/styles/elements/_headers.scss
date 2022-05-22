@@ -18,6 +18,10 @@ h1,
     font-weight: 700;
     letter-spacing: -0.188rem;
     line-height: 1.024;
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 8.5rem;
+    }
 }
 
 h2,
@@ -26,6 +30,10 @@ h2,
     font-weight: 700;
     letter-spacing: -0.099rem;
     line-height: 1.289;
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 4.5rem;
+    }
 }
 
 h3,
@@ -38,4 +46,8 @@ h5,
     font-weight: 700;
     letter-spacing: -0.064rem;
     line-height: 1.172;
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 2.9rem;
+    }
 }
