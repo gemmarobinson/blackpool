@@ -3,7 +3,7 @@
 /** Import everything from autoload */
 import "./autoload/jquery";
 import "./autoload/modernizr";
-// import "./autoload/slick";
+import "./autoload/slick";
 import "./autoload/aos";
 
 /** Import everything from common */

@@ -1,0 +1,39 @@
+.image-and-list-slider {
+    background-color: $clr-white;
+    color: $clr-midnight-blue;
+
+    &__heading {
+        @include font-size(5rem);
+        letter-spacing: -0.111rem;
+        margin: 0 0 3rem;
+
+        @include media-breakpoint-up(xxl) {
+            margin: 0 0 5rem;
+            font-size: 5rem;
+        }
+    }
+
+    &__content {
+        padding: 7.5rem 0 6rem 0;
+    }
+
+    &__list-item {
+        display: flex;
+    }
+
+    &__number {
+        background-color: $clr-orange;
+        color: $clr-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.6rem;
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: normal;
+        margin: 0.5rem 2.3rem 0 0;
+    }
+}
