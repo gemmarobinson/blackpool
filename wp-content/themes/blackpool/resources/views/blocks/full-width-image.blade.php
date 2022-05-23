@@ -10,7 +10,7 @@ PostTypes: page
 SupportsAlign: full
 SupportsMultiple: true
 --}}
-<section data-{{ $block['id'] }} class="{{ $block['classes'] }}">
+<section data-{{ $block['id'] }} class="{{ $block['classes'] }} @if(get_field('include_triangle')) full-width-image--triangle @endif">
     @if($img = get_field('image'))
         <img class="full-width-image__img" src="{{ $img['url'] }}" alt="{{ $img['alt'] }}" />
     @endif
