@@ -1,0 +1,69 @@
+.solutions-grid {
+    &__row {
+        @include media-breakpoint-down(lg) {
+            padding: 7rem 0;
+        }
+
+        &--sky-blue {
+            background-color: $clr-sky-blue;
+        }
+
+        &--mustard {
+            background-color: $clr-mustard;
+        }
+
+        &--purple {
+            background-color: $clr-purple;
+        }
+    }
+
+    &__content {
+        @include media-breakpoint-up(lg) {
+            padding: 5rem 0;
+        }
+    }
+
+    &__image {
+        height: 100%;
+
+        @include media-breakpoint-down(lg) {
+            margin: 0 0 5rem 0;
+        }
+
+        &--left {
+            @include media-breakpoint-up(lg) {
+                margin-left: calc(0px - (((100vw - 96rem) / 2) + 2.4rem));
+            }
+
+            @include media-breakpoint-up(xl) {
+                margin-left: calc(0px - (((100vw - 114rem) / 2) + 2.4rem));
+            }
+
+            @include media-breakpoint-up(xxl) {
+                margin-left: calc(0px - (((100vw - 125rem) / 2) + 2.4rem));
+            }
+        }
+
+        &--right {
+            @include media-breakpoint-up(lg) {
+                margin-right: calc(0px - (((100vw - 96rem) / 2) + 2.4rem));
+            }
+
+            @include media-breakpoint-up(xl) {
+                margin-right: calc(0px - (((100vw - 114rem) / 2) + 2.4rem));
+            }
+
+            @include media-breakpoint-up(xxl) {
+                margin-right: calc(0px - (((100vw - 125rem) / 2) + 2.4rem));
+            }
+        }
+
+        img {
+            @include media-breakpoint-up(lg) {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -8,6 +8,12 @@
             margin-right: unset;
         }
     }
+
+    &--left {
+        @include media-breakpoint-up(xl) {
+            margin-left: unset;
+        }
+    }
 }
 
 // sm: 540px,
