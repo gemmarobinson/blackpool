@@ -113,7 +113,8 @@
             },
             "choices": {
                 "orange": "Orange",
-                "sky-blue": "Sky Blue"
+                "sky-blue": "Sky Blue",
+                "purple": "Purple"
             },
             "default_value": false,
             "allow_null": 0,
@@ -142,5 +143,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653687317
+    "modified": 1653691497
 }

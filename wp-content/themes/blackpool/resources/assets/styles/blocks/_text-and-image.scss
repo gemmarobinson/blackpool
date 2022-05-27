@@ -13,18 +13,19 @@
         padding: 14.6rem 0 16.4rem 0;
     }
 
-    &--triangle-left {
-        position: relative;
-        z-index: 2;
+    &--triangle-top-left {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            z-index: 2;
+        }
 
         &:before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-
             @include media-breakpoint-up(lg) {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
                 top: 5.5rem;
                 left: 0;
                 border-width: 30vw 30vw 0 0;
@@ -35,21 +36,22 @@
         }
     }
 
-    &--triangle-right {
-        position: relative;
-        z-index: 2;
+    &--triangle-top-right {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            z-index: 2;
+        }
 
         &:before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-
             @include media-breakpoint-up(lg) {
-                top: 5.5rem;
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                top: 0;
                 right: 0;
-                border-width: 0 45rem 45rem 0;
+                border-width: 0 30vw 30vw 0;
                 border-color: transparent $clr-primary-blue transparent
                     transparent;
                 z-index: -1;
@@ -57,15 +59,47 @@
         }
     }
 
-    &--triangle-left,
-    &--triangle-right {
+    &--triangle-bottom-left {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            z-index: 2;
+        }
+
         &:before {
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-up(lg) {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
                 bottom: 0;
                 left: 0;
-                border-width: 50vw 0 0 50vw;
+                border-width: 30vw 0 0 30vw;
                 border-color: transparent transparent transparent
                     $clr-primary-blue;
+                z-index: -1;
+            }
+        }
+    }
+
+    &--triangle-bottom-right {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:before {
+            @include media-breakpoint-up(lg) {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                bottom: 0;
+                right: 0;
+                border-width: 0 0 30vw 30vw;
+                border-color: transparent transparent $clr-primary-blue
+                    transparent;
                 z-index: -1;
             }
         }
@@ -78,4 +112,8 @@
             margin: 6.5rem 0 0 0;
         }
     }
+}
+
+.text-and-image ~ .text-and-image {
+    padding-top: 0;
 }

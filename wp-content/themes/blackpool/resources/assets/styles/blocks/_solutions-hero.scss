@@ -122,4 +122,15 @@
             }
         }
     }
+
+    &--purple {
+        .solutions-hero__img {
+            &:before {
+                @include media-breakpoint-up(lg) {
+                    border-color: $clr-purple transparent transparent
+                        transparent;
+                }
+            }
+        }
+    }
 }
