@@ -1,0 +1,45 @@
+.text-cta {
+    background-color: $clr-white;
+    padding: 14rem 0 18.5rem 0;
+    color: $clr-midnight-blue;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 30vw 30vw 0;
+        border-color: transparent $clr-mustard transparent transparent;
+        z-index: -1;
+
+        @include media-breakpoint-up(md) {
+            border-width: 0 20vw 20vw 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            border-width: 0 26rem 26rem 0;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 45vw;
+        z-index: -1;
+
+        @include media-breakpoint-up(md) {
+            width: 40vw;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: 42rem;
+        }
+    }
+}
