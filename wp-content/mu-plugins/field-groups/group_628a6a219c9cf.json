@@ -22,6 +22,22 @@
             "maxlength": ""
         },
         {
+            "key": "field_62913c3a85f25",
+            "label": "Website",
+            "name": "website",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_628a6a34982a7",
             "label": "Subheading",
             "name": "subheading",
@@ -82,6 +98,31 @@
             "ui": 1,
             "ui_on_text": "Left",
             "ui_off_text": "Right"
+        },
+        {
+            "key": "field_62913e7cf16f8",
+            "label": "Colour",
+            "name": "colour",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "orange": "Orange",
+                "sky-blue": "Sky Blue"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -102,5 +143,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653684450
+    "modified": 1653685914
 }
