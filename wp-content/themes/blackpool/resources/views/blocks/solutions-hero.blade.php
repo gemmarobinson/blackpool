@@ -16,8 +16,8 @@ SupportsMultiple: false
         <div class="row @if(get_field('image_position')) justify-content-end @endif">
             <div class="col-24 col-lg-14 col-xl-13 col-xxl-12">
                 <h1>{{ get_field('heading') }}</h1>
-                @if($site = get_field('website'))
-                    <a class="solutions-hero__link" href="{{ $site }}" target="_blank">{{ $site }}</a>
+                @if($link = get_field('website'))
+                    <a class="solutions-hero__link" href="{{ $link['url'] }}" target="{{ $link['target'] }}">{{ $link['title'] }}</a>
                 @endif
                 <p class="bold-text mb-0">{{ get_field('subheading') }}</p>
             </div>
