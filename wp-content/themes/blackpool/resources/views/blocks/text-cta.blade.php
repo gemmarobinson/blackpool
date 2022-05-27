@@ -13,10 +13,14 @@ SupportsMultiple: true
 <section data-{{ $block['id'] }} class="{{ $block['classes'] }}">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-24 col-sm-22 col-md-18 col-xl-16">
+            <div class="col-24 col-sm-22 col-md-20 col-lg-18 col-xl-16">
                 <div class="text-cta__content">
                     <h2 class="color-sand">{{ get_field('heading') }}</h2>
                     {!! get_field('text') !!}
+
+                    @if($btn = get_field('button'))
+                        <a href="{{ $btn['url'] }}" target="{{ $btn['target'] }}" class="bttn">{{ $btn['title'] }}</a>
+                    @endif
                 </div>
             </div>
         </div>

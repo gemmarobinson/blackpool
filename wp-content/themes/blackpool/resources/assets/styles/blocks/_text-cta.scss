@@ -42,4 +42,18 @@
             width: 42rem;
         }
     }
+
+    p,
+    li,
+    a {
+        font-size: 2.1rem;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 2.5rem;
+        }
+
+        strong {
+            color: $clr-midnight-blue;
+        }
+    }
 }

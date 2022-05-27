@@ -1,0 +1,52 @@
+.image-slider {
+    position: relative;
+
+    &__image {
+        width: 100%;
+        height: clamp(30rem, 55vw, 80rem);
+        object-fit: cover;
+    }
+
+    &__dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 5.6rem;
+        z-index: 1;
+
+        .slick-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+
+            li {
+                padding: 0 0.8rem;
+                margin: 0;
+                cursor: pointer;
+
+                button {
+                    cursor: pointer;
+                    border: 0.3rem solid $clr-white;
+                    background: unset;
+                    font-size: 0;
+                    border-radius: 50%;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    padding: 0;
+
+                    @include media-breakpoint-up(sm) {
+                        width: 2.1rem;
+                        height: 2.1rem;
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        background-color: $clr-white;
+                    }
+                }
+            }
+        }
+    }
+}
