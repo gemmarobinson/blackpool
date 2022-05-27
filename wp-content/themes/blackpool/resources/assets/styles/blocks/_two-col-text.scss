@@ -1,0 +1,9 @@
+.two-col-text {
+    padding: 6rem 0;
+}
+
+.text-and-image + .two-col-text {
+    @include media-breakpoint-up(lg) {
+        padding-top: 0;
+    }
+}
