@@ -2,19 +2,58 @@
     background-color: $clr-white;
     color: $clr-midnight-blue;
 
+    &__images {
+        height: 100%;
+
+        .slick-slider,
+        .slick-track,
+        .slick-list {
+            height: 100%;
+        }
+
+        .slick-slide {
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     &__heading {
         @include font-size(5rem);
         letter-spacing: -0.111rem;
-        margin: 0 0 3rem;
 
         @include media-breakpoint-up(xxl) {
-            margin: 0 0 5rem;
             font-size: 5rem;
+        }
+    }
+
+    &__arrows {
+        .slick-next {
+            border: unset;
+            background: unset;
+            font-size: 0;
+            cursor: pointer;
+
+            i {
+                font-size: 3rem;
+                color: $clr-midnight-blue;
+            }
         }
     }
 
     &__content {
         padding: 7.5rem 0 6rem 0;
+    }
+
+    &__counter {
+        color: $clr-sand;
+        font-size: 1.8rem;
+        font-weight: bold;
+        letter-spacing: -0.04rem;
+        line-height: 1;
+        margin: 0 0 0.7rem;
     }
 
     &__list-item {
@@ -35,5 +74,37 @@
         font-weight: 700;
         letter-spacing: normal;
         margin: 0.5rem 2.3rem 0 0;
+    }
+
+    &__dots {
+        .slick-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4rem 0 0 0;
+
+            li {
+                padding: 0 0.8rem;
+                margin: 0;
+                cursor: pointer;
+
+                button {
+                    cursor: pointer;
+                    border: 0.3rem solid $clr-midnight-blue;
+                    background: unset;
+                    font-size: 0;
+                    border-radius: 50%;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    padding: 0;
+                }
+
+                &.slick-active {
+                    button {
+                        background-color: $clr-midnight-blue;
+                    }
+                }
+            }
+        }
     }
 }
