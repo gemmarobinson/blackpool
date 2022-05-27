@@ -1,5 +1,5 @@
 ol,
-ul:not(.gform_fields) {
+ul:not([class]) {
     margin: 0;
     padding-left: 2.2rem;
 
@@ -20,4 +20,10 @@ ul:not(.gform_fields) {
             color: $clr-sand;
         }
     }
+}
+
+ul[class] {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

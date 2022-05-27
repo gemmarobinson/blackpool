@@ -1,0 +1,96 @@
+.stats-block {
+    text-align: center;
+    position: relative;
+    padding: 3rem 0 6rem;
+
+    @include media-breakpoint-up(md) {
+        padding: 6rem 0 9rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 6rem 0 12rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding: 6rem 0 17rem;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 6rem;
+        left: 0;
+        right: 0;
+        border-bottom: 0.2rem solid $clr-midnight-blue;
+
+        @include media-breakpoint-up(md) {
+            bottom: 9rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            bottom: 12rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            bottom: 17rem;
+        }
+    }
+
+    &__icon {
+        width: 9.6rem;
+        max-width: 100%;
+        margin: 0 auto 2rem auto;
+
+        @include media-breakpoint-up(md) {
+            margin: 0 auto 5.6rem auto;
+        }
+    }
+
+    &__single {
+        > div {
+            position: relative;
+            height: 100%;
+            padding: 2rem 0 2.5rem;
+
+            @include media-breakpoint-up(md) {
+                padding: 2.6rem 0 3.5rem;
+            }
+
+            &:before {
+                @include media-breakpoint-up(md) {
+                    content: "";
+                    position: absolute;
+                    bottom: 0.05rem;
+                    top: 0.05rem;
+                    right: -2.4rem;
+                    border-right: 2px dotted $clr-grey-blue;
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-bottom: 2px dotted $clr-grey-blue;
+            }
+        }
+
+        &:nth-of-type(3n) {
+            > div:before {
+                @include media-breakpoint-up(xl) {
+                    border-right: unset;
+                }
+            }
+        }
+
+        &:nth-of-type(2n) {
+            > div:before {
+                @include media-breakpoint-between(md, xl) {
+                    border-right: unset;
+                }
+            }
+        }
+    }
+}
