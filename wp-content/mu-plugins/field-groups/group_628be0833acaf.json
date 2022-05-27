@@ -82,6 +82,25 @@
             "ui": 1,
             "ui_on_text": "Left",
             "ui_off_text": "Right"
+        },
+        {
+            "key": "field_62913f9ae6c61",
+            "label": "Triangle Decoration",
+            "name": "triangle_decoration",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
         }
     ],
     "location": [
@@ -102,5 +121,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653338921
+    "modified": 1653686186
 }

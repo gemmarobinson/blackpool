@@ -10,10 +10,11 @@ PostTypes: page
 SupportsAlign: full
 SupportsMultiple: true
 --}}
-<section data-{{ $block['id'] }} class="{{ $block['classes'] }}">
+@php($position = get_field('image_position') ? 'left' : 'right')
+<section data-{{ $block['id'] }} class="{{ $block['classes'] }} @if(get_field('triangle_decoration')) text-and-image--triangle-{{ $position }} @endif">
     <div class="container">
         <div class="row justify-content-between align-items-center">
-            <div class="col-24 col-lg-12 col-xxl-10 @if(get_field('image_position')) order-lg-1 @endif">
+            <div class="col-24 col-lg-12 col-xxl-11 @if(get_field('image_position')) order-lg-1 @endif">
                 <h2 class="color-sand">{{ get_field('heading') }}</h2>
                 {!! get_field('text') !!}
             </div>
