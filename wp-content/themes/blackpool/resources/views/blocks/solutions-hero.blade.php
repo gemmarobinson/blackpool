@@ -27,5 +27,6 @@ SupportsMultiple: false
         <div class="solutions-hero__img @if(!get_field('image_position')) solutions-hero__img--right @endif">
             <img src="{{ $img['url'] }}" alt="{{ $img['alt'] }}" />
         </div>
+        <div class="solutions-hero__image-triangle"></div>
     @endif
 </section>

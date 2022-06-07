@@ -13,6 +13,11 @@
         padding: 14.6rem 0 16.4rem 0;
     }
 
+    &--white {
+        background-color: $clr-white;
+        color: $clr-midnight-blue;
+    }
+
     &--triangle-top-left {
         @include media-breakpoint-up(lg) {
             position: relative;

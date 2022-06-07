@@ -1,0 +1,68 @@
+.image-hero {
+    height: clamp(72rem, 50vw, 90rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 5.2rem;
+    position: relative;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 70vw 0 0 70vw;
+        border-color: transparent transparent transparent $clr-orange;
+
+        @include media-breakpoint-up(lg) {
+            border-width: 40vw 0 0 40vw;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 20rem 20rem 0;
+        border-color: transparent $clr-purple transparent transparent;
+        z-index: -1;
+
+        @include media-breakpoint-up(md) {
+            border-width: 0 30vw 30vw 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            border-width: 0 30rem 30rem 0;
+        }
+    }
+
+    &--orange {
+        &:before {
+            border-color: transparent transparent transparent $clr-orange;
+        }
+    }
+
+    &--purple {
+        &:before {
+            border-color: transparent transparent transparent $clr-purple;
+        }
+    }
+
+    &--mustard {
+        &:before {
+            border-color: transparent transparent transparent $clr-mustard;
+        }
+    }
+}

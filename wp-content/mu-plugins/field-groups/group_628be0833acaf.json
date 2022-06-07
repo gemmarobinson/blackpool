@@ -128,6 +128,25 @@
             "ui": 1,
             "ui_on_text": "Top",
             "ui_off_text": "Bottom"
+        },
+        {
+            "key": "field_629fd8051924c",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "White",
+            "ui_off_text": "Blue"
         }
     ],
     "location": [
@@ -148,5 +167,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653692681
+    "modified": 1654643142
 }
