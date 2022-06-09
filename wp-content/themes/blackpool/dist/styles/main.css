@@ -29712,6 +29712,7 @@ main {
 
 .travel {
   padding: 6rem 0;
+  background-color: #041926;
 }
 
 @media (min-width: 768px) {
@@ -29731,7 +29732,7 @@ main {
 }
 
 @media (min-width: 576px) {
-  /* line 12, resources/assets/styles/blocks/_travel.scss */
+  /* line 13, resources/assets/styles/blocks/_travel.scss */
 
   .travel__tabs {
     display: -webkit-box;
@@ -29745,7 +29746,7 @@ main {
   }
 }
 
-/* line 19, resources/assets/styles/blocks/_travel.scss */
+/* line 20, resources/assets/styles/blocks/_travel.scss */
 
 .travel__single-tab {
   margin-right: 5.5rem;
@@ -29755,66 +29756,66 @@ main {
   cursor: pointer;
 }
 
-/* line 25, resources/assets/styles/blocks/_travel.scss */
+/* line 26, resources/assets/styles/blocks/_travel.scss */
 
 .travel__single-tab:hover {
   opacity: 0.7;
 }
 
-/* line 29, resources/assets/styles/blocks/_travel.scss */
+/* line 30, resources/assets/styles/blocks/_travel.scss */
 
 .travel__single-tab--active {
   opacity: 1;
 }
 
-/* line 32, resources/assets/styles/blocks/_travel.scss */
+/* line 33, resources/assets/styles/blocks/_travel.scss */
 
 .travel__single-tab--active:hover {
   opacity: 1;
 }
 
-/* line 39, resources/assets/styles/blocks/_travel.scss */
+/* line 40, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row .travel__accordion-row-heading {
   color: #d2b37c;
 }
 
-/* line 45, resources/assets/styles/blocks/_travel.scss */
+/* line 46, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row .travel__table-row:not(:first-child) .travel__table-col:first-of-type {
   font-weight: bold;
   color: #d2b37c;
 }
 
-/* line 53, resources/assets/styles/blocks/_travel.scss */
+/* line 54, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row:nth-child(2n) .travel__accordion-row-heading {
   color: #0070b8;
   border-color: #0070b8;
 }
 
-/* line 60, resources/assets/styles/blocks/_travel.scss */
+/* line 61, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row:nth-child(2n) .travel__table-row:not(:first-child) .travel__table-col:first-of-type {
   font-weight: bold;
   color: #0070b8;
 }
 
-/* line 69, resources/assets/styles/blocks/_travel.scss */
+/* line 70, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row:nth-child(3n) .travel__accordion-row-heading {
   border-color: #8797a3;
   color: #8797a3;
 }
 
-/* line 76, resources/assets/styles/blocks/_travel.scss */
+/* line 77, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row:nth-child(3n) .travel__table-row:not(:first-child) .travel__table-col:first-of-type {
   font-weight: bold;
   color: #8797a3;
 }
 
-/* line 85, resources/assets/styles/blocks/_travel.scss */
+/* line 86, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row-heading {
   padding: 2rem 0 1rem 0;
@@ -29835,14 +29836,14 @@ main {
 }
 
 @media (min-width: 576px) {
-  /* line 85, resources/assets/styles/blocks/_travel.scss */
+  /* line 86, resources/assets/styles/blocks/_travel.scss */
 
   .travel__accordion-row-heading {
     padding: 4rem 0 1rem 0;
   }
 }
 
-/* line 97, resources/assets/styles/blocks/_travel.scss */
+/* line 98, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row-heading h3 {
   font-weight: bold;
@@ -29853,27 +29854,27 @@ main {
   font-size: 19px;
 }
 
-/* line 106, resources/assets/styles/blocks/_travel.scss */
+/* line 107, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row-heading i {
   color: #ffffff;
 }
 
-/* line 111, resources/assets/styles/blocks/_travel.scss */
+/* line 112, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row-heading.active i {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-/* line 117, resources/assets/styles/blocks/_travel.scss */
+/* line 118, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row-content {
   display: none;
   padding: 0;
 }
 
-/* line 121, resources/assets/styles/blocks/_travel.scss */
+/* line 122, resources/assets/styles/blocks/_travel.scss */
 
 .travel__accordion-row-content--active {
   padding: 1.5rem 0 0;
@@ -29881,21 +29882,21 @@ main {
 }
 
 @media (min-width: 576px) {
-  /* line 121, resources/assets/styles/blocks/_travel.scss */
+  /* line 122, resources/assets/styles/blocks/_travel.scss */
 
   .travel__accordion-row-content--active {
     padding: 3rem 0 0;
   }
 }
 
-/* line 132, resources/assets/styles/blocks/_travel.scss */
+/* line 133, resources/assets/styles/blocks/_travel.scss */
 
 .travel__table-col i {
   display: none;
 }
 
 @media (min-width: 576px) {
-  /* line 132, resources/assets/styles/blocks/_travel.scss */
+  /* line 133, resources/assets/styles/blocks/_travel.scss */
 
   .travel__table-col i {
     display: inline-block;
@@ -29904,7 +29905,7 @@ main {
   }
 }
 
-/* line 143, resources/assets/styles/blocks/_travel.scss */
+/* line 144, resources/assets/styles/blocks/_travel.scss */
 
 .travel__table-row {
   width: 100%;
@@ -29915,7 +29916,7 @@ main {
   padding: 1rem 0;
 }
 
-/* line 149, resources/assets/styles/blocks/_travel.scss */
+/* line 150, resources/assets/styles/blocks/_travel.scss */
 
 .travel__table-row:first-child .travel__table-col {
   font-size: 1.5rem;
@@ -29925,7 +29926,7 @@ main {
 }
 
 @media (min-width: 576px) {
-  /* line 149, resources/assets/styles/blocks/_travel.scss */
+  /* line 150, resources/assets/styles/blocks/_travel.scss */
 
   .travel__table-row:first-child .travel__table-col {
     font-weight: normal;
@@ -29934,7 +29935,7 @@ main {
   }
 }
 
-/* line 164, resources/assets/styles/blocks/_travel.scss */
+/* line 165, resources/assets/styles/blocks/_travel.scss */
 
 .travel__table-row:not(:first-child) .travel__table-col {
   font-size: 1.4rem;
@@ -29943,7 +29944,7 @@ main {
 }
 
 @media (min-width: 576px) {
-  /* line 164, resources/assets/styles/blocks/_travel.scss */
+  /* line 165, resources/assets/styles/blocks/_travel.scss */
 
   .travel__table-row:not(:first-child) .travel__table-col {
     font-size: 1.8rem;
@@ -29951,7 +29952,7 @@ main {
   }
 }
 
-/* line 177, resources/assets/styles/blocks/_travel.scss */
+/* line 178, resources/assets/styles/blocks/_travel.scss */
 
 .travel__table-col {
   width: 25%;

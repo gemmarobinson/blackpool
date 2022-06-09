@@ -12,7 +12,7 @@ SupportsMultiple: true
 --}}
 <section data-{{ $block['id'] }} class="{{ $block['classes'] }} travel">
     <div class="container">
-        <div class="row justify-content-center align-items-lg-center">
+        <div class="row justify-content-center">
             <div class="col-20 col-sm-18 col-md-16 col-lg-8 mb-4 mb-lg-0">
                 @if($img = get_field('image'))
                     <img src="{{ $img['url'] }}" alt="{{ $img['alt'] }}" />
