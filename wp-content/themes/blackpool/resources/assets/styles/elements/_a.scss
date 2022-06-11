@@ -1,4 +1,9 @@
 a {
     outline: none;
     text-decoration: none;
+    transition: $transition-default;
+
+    &:hover {
+        color: $clr-sky-blue;
+    }
 }

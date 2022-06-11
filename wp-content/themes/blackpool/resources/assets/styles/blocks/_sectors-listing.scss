@@ -1,0 +1,67 @@
+.sectors-listing {
+    padding: 6rem 0 0rem 0;
+
+    @include media-breakpoint-up(sm) {
+        padding: 9rem 0 3rem 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 11.5rem 0 3rem 0;
+    }
+
+    &__intro {
+        padding: 0 0 7rem;
+
+        @include media-breakpoint-up(sm) {
+            padding: 0 0 10rem;
+        }
+
+        p:last-child {
+            margin: 0;
+        }
+    }
+
+    &__card {
+        color: $clr-white;
+        display: block;
+        margin: 0 0 7rem;
+
+        @include media-breakpoint-up(sm) {
+            margin: 0 0 10rem;
+        }
+
+        @include media-breakpoint-between(md, lg) {
+            margin: 0 0 7rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin: 0 0 14.5rem;
+        }
+
+        &:hover {
+            .sectors-listing__card-image {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__card-image {
+        transition: $transition-default;
+        margin: 0 0 2.5rem;
+    }
+
+    &__card-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+            font-size: 3rem;
+            margin-left: 3rem;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 4.5rem;
+            }
+        }
+    }
+}

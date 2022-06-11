@@ -12,7 +12,9 @@ p,
         margin: 0 0 3rem 0;
     }
 
-    strong {
+    strong,
+    a {
+        font-weight: bold;
         color: $clr-mustard;
     }
 }
