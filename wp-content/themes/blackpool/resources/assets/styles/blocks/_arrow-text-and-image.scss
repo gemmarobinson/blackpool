@@ -60,6 +60,19 @@
         }
     }
 
+    &--orange {
+        .arrow-text-and-image__text {
+            background-color: $clr-orange;
+
+            &:after {
+                @include media-breakpoint-up(lg) {
+                    border-color: transparent transparent transparent
+                        $clr-orange;
+                }
+            }
+        }
+    }
+
     &--sky-blue {
         .arrow-text-and-image__text {
             background-color: $clr-sky-blue;
