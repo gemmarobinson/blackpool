@@ -1,0 +1,13 @@
+.sectors-hero {
+    min-height: clamp(40rem, 55vw, 80rem);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 7.8rem 0;
+    }
+}
