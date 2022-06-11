@@ -147,6 +147,44 @@
             "ui": 1,
             "ui_on_text": "White",
             "ui_off_text": "Blue"
+        },
+        {
+            "key": "field_62a3cd0accd95",
+            "label": "Bigger Body Text",
+            "name": "bigger_body_text",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_62a3d3a0b861f",
+            "label": "Reduce Padding Bottom",
+            "name": "reduce_padding_bottom",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -167,5 +205,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654643142
+    "modified": 1654903728
 }

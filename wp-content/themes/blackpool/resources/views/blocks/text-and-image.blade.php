@@ -20,6 +20,8 @@ SupportsMultiple: true
         {{ $block['classes'] }} 
         @if(get_field('triangle_decoration')) text-and-image--triangle-{{ $vertical }}-{{ $horizontal }} @endif
         @if(get_field('background_color')) text-and-image--white @endif
+        @if(get_field('bigger_body_text')) text-and-image--bigger-text @endif
+        @if(get_field('reduce_padding_bottom')) text-and-image--no-pb @endif
     "
     >
     <div class="container">
