@@ -15,7 +15,20 @@ SupportsMultiple: true
         <div class="row justify-content-center justify-content-lg-between align-items-lg-center">
             <div class="col-20 col-lg-12">
                 <div class="arrow-text-and-image__text">
-                    <p>{{ get_field('text') }}</p>
+                    <div>
+                        <p>{{ get_field('text') }}</p>
+                        @if(get_field('stats') && have_rows('stats'))
+                            <div class="row mt-lg-3">
+                                @while( have_rows('stats') ) @php(the_row())
+                                    <div class="col-24 col-lg-12 mt-3 mt-lg-0">
+                                        <p class="arrow-text-and-image__stat-heading">{{ get_sub_field('heading') }}</p>
+                                        <p class="arrow-text-and-image__stat-text">{{ get_sub_field('text') }}</p>
+                                    </div>
+                                @endwhile
+                            </div>
+
+                        @endif
+                    </div>
                 </div>
             </div>
             <div class="col-24 col-lg-12">

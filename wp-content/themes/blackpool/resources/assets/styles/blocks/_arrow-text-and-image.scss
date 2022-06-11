@@ -22,13 +22,14 @@
             height: 30rem;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         @include media-breakpoint-up(xl) {
             height: 35rem;
         }
 
-        p {
+        > div > p {
             font-weight: bold;
             letter-spacing: -0.82px;
             line-height: 1.47;
@@ -60,6 +61,28 @@
         }
     }
 
+    &__stat-heading {
+        font-size: 2.2rem;
+        font-weight: bold;
+        letter-spacing: -0.77px;
+        margin: 0 0 2rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__stat-text {
+        font-size: 18px;
+        letter-spacing: -0.4px;
+        font-weight: normal;
+        margin: 0;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.8rem;
+        }
+    }
+
     &--orange {
         .arrow-text-and-image__text {
             background-color: $clr-orange;
@@ -88,5 +111,9 @@
 }
 
 .text-and-image + .arrow-text-and-image {
+    padding-top: 0;
+}
+
+.two-col-text-with-heading + .arrow-text-and-image {
     padding-top: 0;
 }

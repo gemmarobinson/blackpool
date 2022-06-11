@@ -18,9 +18,9 @@ SupportsMultiple: false
     @endif
 >
     <div class="container">
-        <div class="row">
-            <div class="col-24 col-sm-16 col-md-12 col-lg-10 col-xl-9 col-xxl-8">
-                <h1 class="mb-0">{{ get_field('heading') }}</h1>
+        <div class="row @if(!get_field('text_position')) justify-content-end @endif">
+            <div class="col-24 col-sm-16 col-md-12 col-xl-10">
+                <h1 class="mb-0 @if(get_field('heading_size')) small-h1 @endif">{{ get_field('heading') }}</h1>
             </div>
         </div>
     </div>

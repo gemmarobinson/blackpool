@@ -1,0 +1,48 @@
+.text-and-full-image {
+    background-color: $clr-white;
+    color: $clr-midnight-blue;
+
+    &__content {
+        padding: 5rem 0;
+
+        @include media-breakpoint-up(xl) {
+            padding: 3rem 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        p:last-child {
+            margin: 0;
+        }
+    }
+
+    &__img {
+        max-width: unset;
+        width: calc(100% + 2.4rem);
+        height: 100%;
+        object-fit: cover;
+        object-position: center right;
+
+        @include media-breakpoint-up(sm) {
+            width: calc(((100vw - 54rem) / 2) + 100% + 2.4rem);
+        }
+
+        @include media-breakpoint-up(md) {
+            width: calc(((100vw - 72rem) / 2) + 100% + 2.4rem);
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: calc(((100vw - 96rem) / 2) + 100% + 2.4rem);
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: calc(((100vw - 114rem) / 2) + 100% + 2.4rem);
+        }
+
+        @include media-breakpoint-up(xxl) {
+            width: calc(((100vw - 125rem) / 2) + 100% + 2.4rem);
+        }
+    }
+}
