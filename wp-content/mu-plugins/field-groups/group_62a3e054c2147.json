@@ -60,7 +60,10 @@
             },
             "choices": {
                 "orange": "Orange",
-                "sky-blue": "Sky Blue"
+                "sky-blue": "Sky Blue",
+                "mustard": "Mustard",
+                "purple": "Purple",
+                "red": "Red"
             },
             "default_value": false,
             "allow_null": 0,
@@ -69,6 +72,25 @@
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_62a51a0133351",
+            "label": "Triangle Decoration?",
+            "name": "triangle_decoration",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_62a5054fb0530",
@@ -91,8 +113,8 @@
         },
         {
             "key": "field_62a5055ab0531",
-            "label": "Stats",
-            "name": "stats",
+            "label": "Statistics",
+            "name": "statistics",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -175,5 +197,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654982004
+    "modified": 1654988546
 }

@@ -5,6 +5,29 @@
         padding: 17rem 0;
     }
 
+    &--triangle {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:before {
+            @include media-breakpoint-up(lg) {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                bottom: 0;
+                right: 0;
+                border-width: 0 0 30vw 30vw;
+                border-color: transparent transparent $clr-primary-blue
+                    transparent;
+                z-index: -1;
+            }
+        }
+    }
+
     &__text {
         background-color: $clr-orange;
         padding: 4rem;
@@ -26,7 +49,7 @@
         }
 
         @include media-breakpoint-up(xl) {
-            height: 35rem;
+            height: 40rem;
         }
 
         > div > p {
@@ -56,7 +79,7 @@
             }
 
             @include media-breakpoint-up(xl) {
-                border-width: 17.5rem 0 17.5rem 17.5rem;
+                border-width: 20rem 0 20rem 20rem;
             }
         }
     }
@@ -65,7 +88,7 @@
         font-size: 2.2rem;
         font-weight: bold;
         letter-spacing: -0.77px;
-        margin: 0 0 2rem;
+        margin: 0 0 0.5rem;
 
         @include media-breakpoint-up(md) {
             font-size: 3.5rem;
@@ -104,6 +127,44 @@
                 @include media-breakpoint-up(lg) {
                     border-color: transparent transparent transparent
                         $clr-sky-blue;
+                }
+            }
+        }
+    }
+
+    &--mustard {
+        .arrow-text-and-image__text {
+            background-color: $clr-mustard;
+
+            &:after {
+                @include media-breakpoint-up(lg) {
+                    border-color: transparent transparent transparent
+                        $clr-mustard;
+                }
+            }
+        }
+    }
+
+    &--purple {
+        .arrow-text-and-image__text {
+            background-color: $clr-purple;
+
+            &:after {
+                @include media-breakpoint-up(lg) {
+                    border-color: transparent transparent transparent
+                        $clr-purple;
+                }
+            }
+        }
+    }
+
+    &--red {
+        .arrow-text-and-image__text {
+            background-color: $clr-red;
+
+            &:after {
+                @include media-breakpoint-up(lg) {
+                    border-color: transparent transparent transparent $clr-red;
                 }
             }
         }

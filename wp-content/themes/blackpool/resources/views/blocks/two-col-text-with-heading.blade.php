@@ -16,7 +16,7 @@ SupportsMultiple: true
             <div class="row">
                 @if(get_field('heading'))
                     <div class="col-24 col-lg-12 mb-3 mb-lg-4">
-                        <h2 class="small-h1 mb-0 color-sand">{{ get_field('heading') }}</h2>
+                        <h2 class="@if(get_field('heading_size')) small-h1 @endif mb-0 color-sand">{{ get_field('heading') }}</h2>
                     </div>
                     @php($heading = true)
                     @php($i = 2)

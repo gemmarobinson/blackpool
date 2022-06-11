@@ -27,7 +27,7 @@ SupportsMultiple: true
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-24 col-lg-12 col-xxl-11 @if(get_field('image_position')) order-lg-1 @endif">
-                <h2 class="@if(!get_field('background_color')) color-sand @endif">{!! get_field('heading') !!}</h2>
+                <h2 class="@if(!get_field('background_color') || get_field('heading_color')) color-sand @endif @if(get_field('heading_size')) h3 @endif">{!! get_field('heading') !!}</h2>
                 {!! get_field('text') !!}
             </div>
             <div class="col-24 col-lg-12">

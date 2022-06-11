@@ -22,6 +22,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_62a50e448ee17",
+            "label": "Heading Size",
+            "name": "heading_size",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Small",
+            "ui_off_text": "Normal"
+        },
+        {
             "key": "field_628be099a96a8",
             "label": "Text",
             "name": "text",
@@ -149,6 +168,33 @@
             "ui_off_text": "Blue"
         },
         {
+            "key": "field_62a50eb48ee18",
+            "label": "Heading Color",
+            "name": "heading_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629fd8051924c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Sand",
+            "ui_off_text": "Blue"
+        },
+        {
             "key": "field_62a3cd0accd95",
             "label": "Bigger Body Text",
             "name": "bigger_body_text",
@@ -205,5 +251,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654903728
+    "modified": 1654985066
 }

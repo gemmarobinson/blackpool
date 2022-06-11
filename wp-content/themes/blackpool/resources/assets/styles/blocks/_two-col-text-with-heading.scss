@@ -9,3 +9,7 @@
         padding: 17rem 0 9rem;
     }
 }
+
+.text-and-image:not(.text-and-image--white) + .two-col-text-with-heading {
+    padding-top: 0;
+}

@@ -10,16 +10,16 @@ PostTypes: page
 SupportsAlign: full
 SupportsMultiple: true
 --}}
-<section data-{{ $block['id'] }} class="{{ $block['classes'] }} arrow-text-and-image--{{ get_field('arrow_colour') }}">
+<section data-{{ $block['id'] }} class="{{ $block['classes'] }} @if(get_field('triangle_decoration')) arrow-text-and-image--triangle @endif arrow-text-and-image--{{ get_field('arrow_colour') }}">
     <div class="container">
         <div class="row justify-content-center justify-content-lg-between align-items-lg-center">
             <div class="col-20 col-lg-12">
                 <div class="arrow-text-and-image__text">
                     <div>
                         <p>{{ get_field('text') }}</p>
-                        @if(get_field('stats') && have_rows('stats'))
+                        @if(get_field('stats') && have_rows('statistics'))
                             <div class="row mt-lg-3">
-                                @while( have_rows('stats') ) @php(the_row())
+                                @while( have_rows('statistics') ) @php(the_row())
                                     <div class="col-24 col-lg-12 mt-3 mt-lg-0">
                                         <p class="arrow-text-and-image__stat-heading">{{ get_sub_field('heading') }}</p>
                                         <p class="arrow-text-and-image__stat-text">{{ get_sub_field('text') }}</p>
