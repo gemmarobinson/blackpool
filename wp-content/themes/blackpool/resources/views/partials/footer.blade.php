@@ -5,8 +5,8 @@
             <div class="row align-items-center">
                 <div class="col-24 col-lg-12">
                     @if($img = $cta['image'])
-                        <img src="{{ $img['sizes']['large'] }}" alt="{{ $cta['alt'] }}" />
-                    @endif                    
+                        <img src="{{ $img['sizes']['large'] }}" alt="{{ $img['alt'] }}" />
+                    @endif             
                 </div>
                 <div class="col-24 col-lg-12">
                     <h2 class="footer-cta__heading">{{ $cta['heading'] }}</h2>
@@ -23,41 +23,41 @@
 @endif
 
 <div class="footer">
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-24 col-md-16">
-            @if(has_nav_menu('footer_navigation'))
-                {!! 
-                    wp_nav_menu([
-                        'theme_location'    => 'footer_navigation',
-                        'depth' 			=> 1,
-                        'menu_class'        => 'footer-menu'
-                    ]) 
-                !!}
-            @endif
-            <div class="d-flex align-items-center">
-                @if($number = get_field('contact_number', 'options'))
-                    <a class="footer__link" href="{{ $number['url'] }}">{{ $number['title'] }}</a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-24 col-md-16">
+                @if(has_nav_menu('footer_navigation'))
+                    {!! 
+                        wp_nav_menu([
+                            'theme_location'    => 'footer_navigation',
+                            'depth' 			=> 1,
+                            'menu_class'        => 'footer-menu'
+                        ]) 
+                    !!}
                 @endif
-                @if( have_rows('socials', 'options') )
-                    <ul class="footer__socials">
-                        @while( have_rows('socials', 'options') ) @php(the_row())
-                            @if($link = get_sub_field('link'))
-                                <li>
-                                    <a class="footer__social-link" href="{{ $link['url'] }}" target="{{ $link['target'] }}">
-                                        <span class="sr-only">{{ $link['title'] }}</span>
-                                        <i class="fab fa-{{ get_sub_field('font_awesome_icon_name', 'options') }}"></i>
-                                    </a>
-                                </li>
-                            @endif
-                        @endwhile
-                    </ul>
-                @endif
+                <div class="d-flex align-items-center">
+                    @if($number = get_field('contact_number', 'options'))
+                        <a class="footer__link" href="{{ $number['url'] }}">{{ $number['title'] }}</a>
+                    @endif
+                    @if( have_rows('socials', 'options') )
+                        <ul class="footer__socials">
+                            @while( have_rows('socials', 'options') ) @php(the_row())
+                                @if($link = get_sub_field('link'))
+                                    <li>
+                                        <a class="footer__social-link" href="{{ $link['url'] }}" target="{{ $link['target'] }}">
+                                            <span class="sr-only">{{ $link['title'] }}</span>
+                                            <i class="fab fa-{{ get_sub_field('font_awesome_icon_name', 'options') }}"></i>
+                                        </a>
+                                    </li>
+                                @endif
+                            @endwhile
+                        </ul>
+                    @endif
+                </div>
+            </div>
+            <div class="col-24 col-md-8">
+
             </div>
         </div>
-        <div class="col-24 col-md-8">
-
-        </div>
     </div>
-</div>
 </div>

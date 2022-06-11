@@ -1,0 +1,79 @@
+.arrow-text-and-image {
+    padding: 6rem 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 17rem 0;
+    }
+
+    &__text {
+        background-color: $clr-orange;
+        padding: 4rem;
+        margin: 0 0 -5rem;
+        z-index: 2;
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            margin: 2rem 0 -5rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin: 0;
+            padding: 0 0 0 6rem;
+            height: 30rem;
+            display: flex;
+            align-items: center;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 35rem;
+        }
+
+        p {
+            font-weight: bold;
+            letter-spacing: -0.82px;
+            line-height: 1.47;
+            margin: 0;
+            font-size: 2.6rem;
+
+            @include media-breakpoint-up(xl) {
+                font-size: 3.4rem;
+            }
+        }
+
+        &:after {
+            @include media-breakpoint-up(lg) {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(100%, -50%);
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 15rem 0 15rem 15rem;
+                border-color: transparent transparent transparent $clr-orange;
+            }
+
+            @include media-breakpoint-up(xl) {
+                border-width: 17.5rem 0 17.5rem 17.5rem;
+            }
+        }
+    }
+
+    &--sky-blue {
+        .arrow-text-and-image__text {
+            background-color: $clr-sky-blue;
+
+            &:after {
+                @include media-breakpoint-up(lg) {
+                    border-color: transparent transparent transparent
+                        $clr-sky-blue;
+                }
+            }
+        }
+    }
+}
+
+.text-and-image + .arrow-text-and-image {
+    padding-top: 0;
+}
