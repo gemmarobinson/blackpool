@@ -1,67 +1,82 @@
 <article @php(post_class())>
     <section class="blog-content">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-24 col-sm-19 col-md-17 col-lg-14 col-xl-12 order-2">
+            <div class="row">
+                <div class="col-24 col-lg-16 offset-lg-2">
 
-                    <div data-aos="fade-up" class="blog-content__content">
-                        {!! apply_filters('the_content', $post->post_content); !!}
-                    </div>
+                    @if( have_rows('post_content') )
+                        @while( have_rows('post_content') ) @php(the_row()) 
+                            <div data-aos="fade-up" class="blog-content__content">
+                                @if($standfirst = get_sub_field('standfirst'))
+                                    <p>{{ $standfirst }}</p>
+                                @endif
 
-                    @if( get_sub_field("return_button", "option") )
-                        <div data-aos="fade-up" class="blog-content__button">
-                            <a href="{{get_sub_field("return_button", "option")['url']}}" target="{{get_sub_field("return_button", "option")['target']}}" class="bttn bttn-black">{{get_sub_field("return_button", "option")['title']}}</a>
-                        </div>
+                                
+                                @if( have_rows('body') )
+                                    @while ( have_rows('body') ) @php(the_row())
+
+                                        @if( get_row_layout() == 'wysiwyg' )
+                                            
+                                            {!! get_sub_field('wysiwyg') !!}
+                                            
+                                        @elseif( get_row_layout() == 'image' )
+
+                                           <img src="{{ get_sub_field('image')['url'] }}" alt="" />
+                                        @endif
+
+                                    @endwhile
+                                @endif
+                            </div>
+                        @endwhile
                     @endif
                 </div>
-
-                @if( have_rows('blog_post_call_to_actions', 'option') )
-                        @while ( have_rows('blog_post_call_to_actions', 'option') ) @php(the_row())
-                        @php $left_feature = get_sub_field('left_feature'); @endphp
-                        @if( $left_feature )
-                            @if( $left_feature['show_feature'] )
-                                <div class="col-6 order-3">
-                                    <div class="blog-benefit" data-aos="fade-up">
-                                        @if( $left_feature['icon'] )
-                                            <div class="blog-benefit__icon-container icon_container js-image">
-                                                <img class="blog-benefit__icon lazy" data-src="{{$left_feature['icon']['sizes']['large']}}" alt="{{$left_feature['icon']['alt']}}">
-                                            </div>
-                                        @endif
-                                        
-                                        <h3 class="blog-benefit__heading">{{$left_feature['heading']}}</h3>
-                                        <p class="small-paragraph">{{$left_feature['text']}}</p>
-
-                                        @if($left_feature['button'])
-                                            <a href="{{$left_feature['button']['url']}}" target="{{$left_feature['button']['target']}}" class="bttn bttn-black blog-benefit__button">{{$left_feature['button']['title']}}</a>
-                                        @endif
-                                    </div>
-                                </div>
-                            @endif
-                        @endif
-
-                        @php $right_feature = get_sub_field('right_feature', 'option'); @endphp
-                        @if( $right_feature )
-                            @if($right_feature['show_feature'])
-                                <div class="col-6 order-1">
-                                    <div class="blog-benefit" data-aos="fade-up">
-                                        @if( $right_feature['icon'] )
-                                            <div class="blog-benefit__icon-container icon_container js-image">
-                                                <img class="blog-benefit__icon lazy" data-src="{{$right_feature['icon']['sizes']['large']}}" alt="{{$right_feature['icon']['alt']}}">
-                                            </div>
-                                        @endif
-                                        <h3 class="blog-benefit__heading">{{$right_feature['heading']}}</h3>
-                                        <p class="small-paragraph">{{$right_feature['text']}}</p>
-                                        @if( $right_feature['button'] )
-                                            <a href="{{$right_feature['button']['url']}}" target="{{$right_feature['button']['target']}}" class="bttn bttn-black blog-benefit__button">{{$right_feature['button']['title']}}</a>
-                                        @endif
-                                    </div>
-                                </div>
-                            @endif
-                        @endif
-
-                    @endwhile
-                @endif
+                <div class="col-24 col-lg-6">
+                    <h3>Share article</h3>
+                </div>
             </div>
         </div>
     </section>
 </article>
+
+<section class="latest-news">
+    <div class="container">
+        <div class="row">
+            <div class="col-24">
+                <h2 class="latest-news__heading medium-weight-h2">More Stories</h2>
+            </div>
+            <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 3,
+                    'post__not_in' => array(get_the_id())
+                );
+                $the_query = new WP_Query( $args );
+                $posts = get_field('posts') ? get_field('posts') : wp_list_pluck( $the_query->posts, 'ID' );
+                $i = 1;
+            ?>
+
+            @if($posts)
+                @foreach($posts as $id)
+                    <div class="col-24 col-md-12 col-xl-8">
+                        <a class="news-card" href="{{ get_the_permalink($id) }}">
+                            <div class="news-card__image">
+                                @if(get_field('post_meta', $id) && isset(get_field('post_meta', $id)['featured_image']) && isset(get_field('post_meta', $id)['featured_image']['url']))
+                                    @php($img = get_field('post_meta', $id)['featured_image'])
+                                    <img src="{{ $img['url'] }}" alt="{{ $img['alt'] }}" /> 
+                                @endif
+                            </div>
+                            <h3 class="news-card__heading paragraph">{!! get_the_title($id) !!}</h3>
+                            <p class="color-grey-blue mb-0">{{ get_the_date('jS F Y', $id) }}</p>
+                        </a>
+                    </div>
+                    @php($i++)
+                @endforeach
+            @endif
+
+            <div class="col-24 d-flex justify-content-center mt-lg-5">
+                <a class="bttn bttn--black" href="{{ get_post_type_archive_link( 'post' ) }}">See More</a>
+            </div>
+        
+        </div>  
+    </div>
+</section>
