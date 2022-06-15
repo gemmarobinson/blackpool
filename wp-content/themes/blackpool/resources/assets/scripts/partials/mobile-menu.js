@@ -4,6 +4,7 @@ $(".js-menu-toggle").on("click", function (e) {
     $("body").toggleClass("is-active");
     $("html").toggleClass("is-active");
     $(this).toggleClass("is-active");
+    $(".js-header").toggleClass("header--menu-open");
 });
 
 $(".menu-item-has-children").click(function (e) {
