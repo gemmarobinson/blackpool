@@ -28,7 +28,13 @@
             @endif
         </div>
         <div class="row">
-            <div class="col-xs-24">
+            <div class="col-24 mt-3 mt-lg-5">
+
+                <div class="page-number">
+                    @php($paged = (get_query_var('paged')) ? get_query_var('paged') : 1)
+                    Page {{ $paged }}
+                </div>
+                
                 {!! get_the_posts_navigation(
                     array(
                         'prev_text' => 'Older Posts',

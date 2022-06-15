@@ -1,0 +1,23 @@
+.content-rows {
+    padding: 4rem 0;
+
+    @include media-breakpoint-up(sm) {
+        padding: 8rem 0 4rem 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 11.5rem 0 7.5rem 0;
+    }
+
+    &__row {
+        padding: 3rem 0;
+
+        @include media-breakpoint-up(sm) {
+            padding: 5.5rem 0;
+        }
+
+        &:not(:last-of-type) {
+            border-bottom: 0.3rem dotted $clr-primary-blue;
+        }
+    }
+}

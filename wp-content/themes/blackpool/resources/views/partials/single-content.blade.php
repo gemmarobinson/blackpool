@@ -2,13 +2,35 @@
     <section class="blog-content">
         <div class="container">
             <div class="row">
-                <div class="col-24 col-lg-16 offset-lg-2">
-
+                <div class="col-24 col-md-20 col-lg-6 offset-md-2 offset-lg-0 order-lg-1 mb-4 mb-lg-0">
+                    <div class="social-sharing">
+                        @php($permalink = get_the_permalink())
+                        <h3 class="social-sharing__heading">Share article</h3>
+                        <ul class="social-sharing__list">
+                            <li class="linked-in">
+                                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ $permalink }}" title="Linkedin" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="https://twitter.com/share?url={{ $permalink }}" title="Twitter" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="facebook">
+                                <a href="http://www.facebook.com/sharer.php?u={{ $permalink }}" title="facebook" target="_blank">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-24 col-md-20 col-lg-16 offset-md-2">
                     @if( have_rows('post_content') )
                         @while( have_rows('post_content') ) @php(the_row()) 
                             <div data-aos="fade-up" class="blog-content__content">
                                 @if($standfirst = get_sub_field('standfirst'))
-                                    <p>{{ $standfirst }}</p>
+                                    <p class="large-paragraph">{!! $standfirst !!}</p>
                                 @endif
 
                                 
@@ -29,9 +51,6 @@
                             </div>
                         @endwhile
                     @endif
-                </div>
-                <div class="col-24 col-lg-6">
-                    <h3>Share article</h3>
                 </div>
             </div>
         </div>

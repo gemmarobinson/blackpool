@@ -24,16 +24,12 @@ SupportsMultiple: false
 
         @if($posts)
             @foreach($posts as $id)
-                @php
-                    $image_id = get_post_thumbnail_id($id);
-                    $feat_image_src = wp_get_attachment_image_url($image_id, 'large');
-                    $feat_image_alt = get_post_meta($image_id , '_wp_attachment_image_alt', true);
-                @endphp
                 <div class="row align-items-center">
                     <div class="col-24 col-lg-12 order-lg-1 mb-3 mb-lg-0">
                         <a href="{{ get_the_permalink($id) }}">
-                            @if($feat_image_src)
-                                <img src="{{ $feat_image_src }}" alt="{{ $feat_image_alt }}" />
+                            @if(get_field('post_meta', $id) && isset(get_field('post_meta', $id)['featured_image']) && isset(get_field('post_meta', $id)['featured_image']['url']))
+                                @php($img = get_field('post_meta', $id)['featured_image'])
+                                <img src="{{ $img['url'] }}" alt="{{ $img['alt'] }}" /> 
                             @endif
                         </a>
                     </div>

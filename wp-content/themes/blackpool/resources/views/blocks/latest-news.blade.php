@@ -19,7 +19,8 @@ SupportsMultiple: true
             @php
                 $args = array(
                     'post_type' => 'post',
-                    'posts_per_page' => 6
+                    'posts_per_page' => 6,
+                    'offset' => 1
                 );
                 $the_query = new WP_Query( $args );
                 $posts = get_field('posts') ? get_field('posts') : wp_list_pluck( $the_query->posts, 'ID' );

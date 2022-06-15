@@ -94,5 +94,9 @@ Container::getInstance()
 
 require 'includes/theme-support.php';
 require 'includes/helpers.php';
-// require 'includes/custom-post-types.php';
-// require 'includes/taxonomies.php';
+
+function change_post_object_label() {
+        global $wp_post_types;
+        $wp_post_types['post']->show_in_rest = false;
+}
+add_action( 'init', 'change_post_object_label' );

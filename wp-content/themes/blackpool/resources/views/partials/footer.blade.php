@@ -1,5 +1,5 @@
 @php($cta = get_field('footer_cta', 'options'))
-@if(get_field('show_footer_cta') && $cta)
+@if((get_field('show_footer_cta') && $cta) || $cta && is_single())
     <section class="footer-cta">
         <div class="container">
             <div class="row align-items-center">
@@ -56,7 +56,9 @@
                 </div>
             </div>
             <div class="col-24 col-md-8">
-
+                <a class="footer__logo" href="{{ home_url('/') }}">
+                    <img src="@asset('images/logo.png')" alt="" />
+                </a>
             </div>
         </div>
     </div>
