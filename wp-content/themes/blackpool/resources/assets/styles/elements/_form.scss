@@ -24,26 +24,22 @@ form {
         display: block;
         width: 100%;
         border-radius: 0;
-        border: 0.2rem solid $clr-grey-blue;
+        border: none;
+        border-bottom: 0.1rem solid $clr-grey-blue;
         box-sizing: border-box;
-        background-color: $clr-grey-blue;
+        background-color: transparent;
         transition: border-color $transition-default;
-        color: $clr-grey-blue;
+        color: $clr-midnight-blue;
         text-align: left;
         font-family: inherit;
         line-height: 1.5;
-        font-size: 1.5rem;
-        padding: 1.1rem 1.6rem;
-
-        @include media-breakpoint-up(md) {
-            font-size: 1.6rem;
-            padding: 1rem 1.6rem;
-        }
+        font-size: 1.6rem;
+        padding: 1rem 2rem 1rem 0;
 
         &:active,
         &:focus {
             outline: none;
-            border-color: darken($clr-grey-blue, 10%);
+            border-color: $clr-midnight-blue;
         }
     }
 

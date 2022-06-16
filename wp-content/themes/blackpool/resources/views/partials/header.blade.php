@@ -10,26 +10,42 @@
 </header>
 
 <div class="full-screen-menu js-menu">
-    <div class="full-screen-menu__image">
-        
-    </div>
+    @if($img = get_field('menu_image', 'options'))
+        <div class="full-screen-menu__image full-screen-menu__desktop-only">
+            <img src="{{ $img['url'] }}" alt="{{ $img['alt'] }}" />
+        </div>
+    @endif
     <div class="container">
         <div class="row">
-            <div class="col-8 offset-6">
-                <p class="full-screen-menu__heading">Welcome to Blackpool</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus urna convallis tortor tempus.</p>
-                Search Bar
+            <div class="col-24 col-md-19 col-xl-9 col-xxl-8 offset-md-5 offset-xl-5 offset-xxl-6">
+                @if(get_field('menu_title', 'options'))
+                    <p class="full-screen-menu__heading">{{ get_field('menu_title', 'options') }}</p>
+                @endif
+                @if(get_field('menu_text', 'options'))
+                    <p class="full-screen-menu__desktop-only">{{ get_field('menu_text', 'options') }}</p>
+                @endif
+                <form action="/" method="get" class="full-screen-menu__search full-screen-menu__search--desktop">
+                    <label for="search">Search site</label>
+                    <input type="text" placeholder="Search site" name="s" id="search" value="<?php the_search_query(); ?>" />
+                    <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                </form>
             </div>
-            <div class="col-8 offset-2">
-                    @if(has_nav_menu('primary_navigation'))
-                        {!! 
-                            wp_nav_menu([
-                                'theme_location'    => 'primary_navigation',
-                                'depth' 			=> 2,
-                                'menu_class'        => 'full-screen-menu__menu'
-                            ]) 
-                        !!}
-                    @endif
+            <div class="col-24 col-md-19 col-xl-9 col-xxl-8 offset-md-5 offset-xl-1 offset-xxl-2">
+                @if(has_nav_menu('primary_navigation'))
+                    {!! 
+                        wp_nav_menu([
+                            'theme_location'    => 'primary_navigation',
+                            'depth' 			=> 2,
+                            'menu_class'        => 'full-screen-menu__menu'
+                        ]) 
+                    !!}
+                @endif
+                
+                <form action="/" method="get" class="full-screen-menu__search full-screen-menu__search--mobile">
+                    <label for="search">Search site</label>
+                    <input type="text" placeholder="Search site" name="s" id="search" value="<?php the_search_query(); ?>" />
+                    <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                </form>
             </div>
         </div>
     </div>
