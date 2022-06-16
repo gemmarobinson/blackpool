@@ -206,7 +206,7 @@ form {
         }
     }
 
-    .gfield_contains_required {
+    .gfield_error {
         input,
         textarea {
             border-color: $clr-red;
