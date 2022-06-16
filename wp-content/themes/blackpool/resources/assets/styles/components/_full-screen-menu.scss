@@ -7,9 +7,9 @@
     z-index: 9;
     background-color: $clr-white;
     color: $clr-midnight-blue;
-    // transform: translateY(-100%);
-    // pointer-events: none;
-    // transition: 0.3s ease all;
+    transform: translateY(-100%);
+    pointer-events: none;
+    transition: 0.3s ease all;
 
     @include media-breakpoint-up(md) {
         display: flex;

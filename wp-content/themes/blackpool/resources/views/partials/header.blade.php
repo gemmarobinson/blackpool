@@ -26,7 +26,7 @@
                 @endif
                 <form action="/" method="get" class="full-screen-menu__search full-screen-menu__search--desktop">
                     <label for="search">Search site</label>
-                    <input type="text" placeholder="Search site" name="s" id="search" value="<?php the_search_query(); ?>" />
+                    <input type="text" placeholder="Search site" name="s" id="search" value="{{ the_search_query() }}" />
                     <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
                 </form>
             </div>
@@ -43,7 +43,7 @@
                 
                 <form action="/" method="get" class="full-screen-menu__search full-screen-menu__search--mobile">
                     <label for="search">Search site</label>
-                    <input type="text" placeholder="Search site" name="s" id="search" value="<?php the_search_query(); ?>" />
+                    <input type="text" placeholder="Search site" name="s" id="search" value="{{ the_search_query() }}" />
                     <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
                 </form>
             </div>

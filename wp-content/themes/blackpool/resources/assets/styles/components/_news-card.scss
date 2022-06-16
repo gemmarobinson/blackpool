@@ -17,6 +17,7 @@
         height: 28.7rem;
         transition: $transition-default;
         margin: 0 0 1.5rem;
+        position: relative;
 
         @include media-breakpoint-up(sm) {
             margin: 0 0 3rem;
@@ -27,6 +28,16 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+
+    &__type {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: $clr-mustard;
+        padding: 0.5rem 1.2rem;
+        font-size: 1.4rem;
     }
 
     &__heading {
