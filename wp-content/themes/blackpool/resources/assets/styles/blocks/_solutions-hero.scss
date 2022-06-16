@@ -2,6 +2,9 @@
     padding: 14rem 0 0 0;
     position: relative;
     z-index: 2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @include media-breakpoint-up(sm) {
         padding: 22rem 0 0 0;
@@ -23,120 +26,6 @@
 
         &:hover {
             color: $clr-mustard;
-        }
-    }
-
-    &__img {
-        @include media-breakpoint-up(lg) {
-            position: absolute;
-            top: 0;
-            right: 50vw;
-            bottom: 0;
-        }
-
-        @include media-breakpoint-down(lg) {
-            margin: 5rem 0 0 0;
-            width: 90vw;
-            max-width: 100%;
-        }
-
-        @include media-breakpoint-down(sm) {
-            width: 95vw;
-        }
-
-        img {
-            @include media-breakpoint-up(lg) {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center right;
-            }
-        }
-
-        &:before {
-            @include media-breakpoint-up(lg) {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 50%;
-                background-color: $clr-orange;
-                z-index: -1;
-            }
-
-            @include media-breakpoint-up(xl) {
-            }
-        }
-
-        &--right {
-            @include media-breakpoint-up(lg) {
-                right: unset;
-                left: 50vw;
-            }
-
-            @include media-breakpoint-down(lg) {
-                margin: 5rem 0 0 auto;
-            }
-
-            img {
-                @include media-breakpoint-up(lg) {
-                    object-position: center left;
-                }
-            }
-        }
-    }
-
-    &__image-triangle {
-        // background-color: green;
-        // aspect-ratio: 1;
-        // position: absolute;
-        // left: calc(50vw + 0.1rem);
-        // bottom: 50%;
-        // top: -0.1rem;
-        // transform: translateX(-100%);
-        // overflow: hidden;
-        // z-index: -1;
-
-        // &:before {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     right: -0.1rem;
-        //     width: 100%;
-        //     height: 100%;
-        //     background-color: red;
-        //     transform: rotate(-45deg) transform(50%);
-        // }
-    }
-
-    &--orange {
-        .solutions-hero__img {
-            &:before {
-                @include media-breakpoint-up(lg) {
-                    background-color: $clr-orange;
-                }
-            }
-        }
-    }
-
-    &--sky-blue {
-        .solutions-hero__img {
-            &:before {
-                @include media-breakpoint-up(lg) {
-                    background-color: $clr-sky-blue;
-                }
-            }
-        }
-    }
-
-    &--purple {
-        .solutions-hero__img {
-            &:before {
-                @include media-breakpoint-up(lg) {
-                    background-color: $clr-purple;
-                }
-            }
         }
     }
 }

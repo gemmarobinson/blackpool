@@ -11,6 +11,10 @@ SupportsAlign: full
 SupportsMultiple: false
 --}}
 <section data-{{ $block['id'] }} class="{{ $block['classes'] }}">
+    @if(get_field('background')) 
+        <div class="two-tier-hero__background" style="background-image: url('{{ get_field('background')['url'] }}');"></div>
+    @endif
+
     @if($tier_one = get_field('tier_one'))
         <div class="two-tier-hero__top">
             <div class="container">
@@ -38,20 +42,4 @@ SupportsMultiple: false
             </div>
         </div>
     @endif
-
-    @if($img_left = get_field('image_left'))
-        <div class="two-tier-hero__image-left">
-            <img src="{{ $img_left['url'] }}" alt="{{ $img_left['alt'] }}" />
-        </div>
-    @endif
-    
-    @if($img_right = get_field('image_right'))
-        <div class="two-tier-hero__image-right">
-            <img src="{{ $img_right['url'] }}" alt="{{ $img_right['alt'] }}" />
-        </div>
-    @endif
-
-    <div class="two-tier-hero__shape-top-right"></div>
-    <div class="two-tier-hero__shape-bottom-right"></div>
-    <div class="two-tier-hero__shape-bottom-left"></div>
 </section>

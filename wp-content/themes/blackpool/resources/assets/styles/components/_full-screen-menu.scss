@@ -105,8 +105,10 @@
             }
 
             &.current-menu-item {
-                > a {
-                    color: $clr-mustard;
+                &:not(.menu-item-object-custom) {
+                    > a {
+                        color: $clr-mustard;
+                    }
                 }
             }
 
@@ -118,7 +120,7 @@
 
                     > a {
                         display: block;
-                        color: #596e8b;
+                        color: $clr-primary-blue;
                         font-size: 13px;
                         font-weight: 500;
                         letter-spacing: -0.29px;
@@ -130,8 +132,10 @@
                     }
 
                     &.current-menu-item {
-                        > a {
-                            color: $clr-mustard;
+                        &:not(.menu-item-object-custom) {
+                            > a {
+                                color: $clr-mustard;
+                            }
                         }
                     }
                 }

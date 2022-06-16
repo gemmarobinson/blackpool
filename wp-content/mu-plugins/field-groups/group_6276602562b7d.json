@@ -151,33 +151,9 @@
             ]
         },
         {
-            "key": "field_6277f39625a2d",
-            "label": "Image Left",
-            "name": "image_left",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_6277f39e25a2e",
-            "label": "Image Right",
-            "name": "image_right",
+            "key": "field_62abb15ac4c2b",
+            "label": "Background",
+            "name": "background",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -217,5 +193,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652028488
+    "modified": 1655419232
 }

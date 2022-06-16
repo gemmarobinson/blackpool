@@ -10,7 +10,7 @@ PostTypes: page
 SupportsAlign: full
 SupportsMultiple: false
 --}}
-<section data-{{ $block['id'] }} class="{{ $block['classes'] }}">
+<section data-{{ $block['id'] }} class="{{ $block['classes'] }}" id="guide-form">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-24 col-lg-12 mb-4 mb-lg-0 order-lg-1">

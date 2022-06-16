@@ -11,11 +11,11 @@ SupportsAlign: full
 SupportsMultiple: false
 --}}
 @php($color = get_field('colour'))
-<section data-{{ $block['id'] }} class="{{ $block['classes'] }} @if($color) solutions-hero--{{ $color }} @endif">
+<section data-{{ $block['id'] }} class="{{ $block['classes'] }}" @if($img = get_field('image')) style="background-image: url('{{ $img['url'] }}');" @endif>
     <div class="container">
         <div class="row @if(get_field('image_position')) justify-content-end @endif">
             <div class="col-24 col-lg-14 col-xl-13 col-xxl-12">
-                <h1>{{ get_field('heading') }}</h1>
+                <h1 class="small-h1">{{ get_field('heading') }}</h1>
                 @if($link = get_field('website'))
                     <a class="solutions-hero__link" href="{{ $link['url'] }}" target="{{ $link['target'] }}">{{ $link['title'] }}</a>
                 @endif
@@ -23,10 +23,4 @@ SupportsMultiple: false
             </div>
         </div>
     </div>
-    @if($img = get_field('image'))
-        <div class="solutions-hero__img @if(!get_field('image_position')) solutions-hero__img--right @endif">
-            <img src="{{ $img['url'] }}" alt="{{ $img['alt'] }}" />
-        </div>
-        <div class="solutions-hero__image-triangle"></div>
-    @endif
 </section>
