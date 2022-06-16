@@ -3,7 +3,7 @@ Title: Contact Hero
 Description: Contact Hero Section
 Category: blocks
 Icon: admin-comments
-Keywords: sectors image hero image triangle text
+Keywords: contact hero image heading
 Mode: edit
 Align: full
 PostTypes: page

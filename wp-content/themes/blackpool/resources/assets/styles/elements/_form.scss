@@ -1,6 +1,6 @@
 form {
     .gfield {
-        margin: 0 0 1.6rem;
+        margin: 0 0 3rem;
     }
 
     label {
@@ -36,6 +36,10 @@ form {
         font-size: 1.6rem;
         padding: 1rem 2rem 1rem 0;
 
+        @include media-breakpoint-up(md) {
+            font-size: 2.3rem;
+        }
+
         &:active,
         &:focus {
             outline: none;
@@ -48,35 +52,78 @@ form {
         resize: none;
     }
 
+    fieldset {
+        border: unset;
+        padding: 0;
+    }
+
     input[type="submit"] {
         cursor: pointer;
         appearance: none;
         border-radius: 0;
-        border: 0.2rem solid $clr-black;
-        background-color: $clr-black;
-        transition: all $transition-default;
+        border: unset;
+        display: inline-block;
+        background-color: $clr-midnight-blue;
         color: $clr-white;
-        line-height: 1.5;
-        font-size: 1.4rem;
-        padding: 1rem 1.9rem;
-        margin-top: 1.6rem;
-
-        @include media-breakpoint-up(sm) {
-            margin-top: 2.4rem;
-        }
-
-        @include media-breakpoint-up(md) {
-            font-size: 1.6rem;
-            padding: 1rem 3.8rem;
-        }
+        font-weight: normal;
+        letter-spacing: -0.044rem;
+        line-height: 1.4;
+        font-size: 2rem;
+        padding: 0.85rem 3rem;
+        transition: $transition-default;
 
         &:hover,
-        &:active,
-        &:focus {
-            outline: none;
-            background: none;
-            color: $clr-black;
+        &:focus,
+        &:active {
+            background-color: $clr-purple;
+            color: $clr-white;
         }
+    }
+
+    .hidden_label {
+        > label,
+        legend {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+    }
+
+    .gf_name_has_2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            width: calc(50% - 2.4rem);
+
+            label {
+                clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+        }
+    }
+
+    .ginput_container_consent {
+        display: flex;
+    }
+
+    .gfield_consent_label {
+        font-family: "Archivo";
+        font-weight: normal;
+        font-size: 18px;
+        letter-spacing: -0.4px;
+        line-height: 27px;
+        margin: -0.5rem 0 0 1rem;
     }
 
     .ginput_container_select {
@@ -158,6 +205,13 @@ form {
             text-align: left;
         }
     }
+
+    .gfield_contains_required {
+        input,
+        textarea {
+            border-color: $clr-red;
+        }
+    }
 }
 
 .contact-form {
@@ -176,6 +230,7 @@ form {
 
 .gform_submission_error {
     color: $clr-red;
+    font-size: 2.1rem;
 }
 
 .gform_confirmation_message {

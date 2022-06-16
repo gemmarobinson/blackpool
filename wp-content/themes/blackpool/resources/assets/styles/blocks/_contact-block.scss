@@ -1,0 +1,43 @@
+.contact-block {
+    background-color: $clr-white;
+    color: $clr-midnight-blue;
+    padding: 4rem 0;
+
+    @include media-breakpoint-up(sm) {
+        padding: 7rem 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 15.5rem 0 10rem;
+    }
+
+    &__inner {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+        }
+
+        &:after {
+            @include media-breakpoint-up(lg) {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 13.4rem;
+                height: 13.4rem;
+                background-image: url(../images/contact-triangles.png);
+                background-size: contain;
+                background-position: top right;
+            }
+        }
+    }
+
+    p {
+        a {
+            color: $clr-midnight-blue;
+
+            &:hover {
+                color: $clr-mustard;
+            }
+        }
+    }
+}
